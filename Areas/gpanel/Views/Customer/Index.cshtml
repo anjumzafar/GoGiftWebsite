@@ -60,6 +60,7 @@
         <tbody class="tbody"></tbody>
     </table>
 </div>
+
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -69,130 +70,110 @@
             </div>
 
             <div class="modal-body">
-
-
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card card-primary">
-                            <div class="card-header">
-                                <h3 class="card-title">Customer Details</h3>
-                                <div class="card-tools">
-                                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                                        <i class="fas fa-minus"></i>
-                                    </button>
-                                </div>
+                <form>
+                    <div class="row">
+                        <!-- Customer Details Column 1 -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="CustomerID">Customer ID</label>
+                                <input asp-for="CustomerID" class="form-control" placeholder="CustomerID" disabled="disabled" />
                             </div>
-                            <div class="card-body">
-
-                                <div class="form-group">
-                                    <label asp-for="CustomerID"></label>
-                                    <input asp-for="CustomerID" placeholder="CustomerID" disabled="disabled" />
-                                </div>
-                                <div class="form-group">
-                                    <label asp-for="CustomerName"></label>
-                                    <input asp-for="CustomerName" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    @*   <label asp-for="DOB"></label>
-                                    <input asp-for="DOB" class="form-control"> *@
-
-                                    <label asp-for="DOB"></label>
-                                    <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                                        <input type="text" id="DOB" placeholder="DOB" class="form-control datetimepicker-input" data-target="#reservationdate" />
-                                        <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="form-group">
-                                    <label asp-for="Gender"></label>
-                                    <input asp-for="Gender" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label asp-for="STDCode"></label>
-                                    <input asp-for="STDCode" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label asp-for="MobileNo"></label>
-                                    <input asp-for="MobileNo" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label asp-for="Address"></label>
-                                    <input asp-for="Address" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label asp-for="City"></label>
-                                    <input asp-for="City" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label asp-for="State"></label>
-                                    <input asp-for="State" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label asp-for="Pincode"></label>
-                                    <input asp-for="Pincode" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label asp-for="Country"></label>
-                                    <input asp-for="Country" class="form-control" value="India">
-                                </div>
-
+                            <div class="form-group">
+                                <label asp-for="CustomerName">Customer Name</label>
+                                <input asp-for="CustomerName" class="form-control">
                             </div>
-                            <!-- /.card-body -->
+                            <div class="form-group">
+                                <label asp-for="Gender">Gender</label>
+                                <input asp-for="Gender" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="MobileNo">Mobile No</label>
+                                <input asp-for="MobileNo" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="City">City</label>
+                                <input asp-for="City" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="State">State</label>
+                                <input asp-for="State" class="form-control">
+                            </div>
                         </div>
-                        <!-- /.card -->
 
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card card-primary">
-                            <div class="card-header">
-                                <h3 class="card-title">Login Details</h3>
-                                <div class="card-tools">
-                                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                                        <i class="fas fa-minus"></i>
-                                    </button>
+                        <!-- Customer Details Column 2 -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="DOB">Date of Birth</label>
+                                <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                                    <input type="text" id="DOB" placeholder="DOB" class="form-control datetimepicker-input" data-target="#reservationdate" />
+                                    <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="card-body">
-                                <div class="form-group">
-                                    <label for="EmailID">EmailID</label>
-                                    <input id="EmailID" type="text" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="Password">Password</label>
-                                    <div class="input-group">
+                            <div class="form-group">
+                                <label asp-for="STDCode">STD Code</label>
+                                <input asp-for="STDCode" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Address">Address</label>
+                                <input asp-for="Address" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Pincode">Pincode</label>
+                                <input asp-for="Pincode" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Country">Country</label>
+                                <input asp-for="Country" class="form-control" value="India">
+                            </div>
+                        </div>
+                    </div>
 
-                                        <input id="Password" type="text" class="form-control" placeholder="Password">
-                                        <div class="input-group-append" id="show_hide_password">
-                                            <div class="input-group-text">
-                                                <a href="javascript:showPassword()"><i id="iTag" class="fa fa-eye-slash" aria-hidden="true"></i></a>
+                    <!-- Login Details Section -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Login Details</h3>
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="EmailID">Email ID</label>
+                                        <input id="EmailID" type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Password">Password</label>
+                                        <div class="input-group">
+                                            <input id="Password" type="text" class="form-control" placeholder="Password">
+                                            <div class="input-group-append" id="show_hide_password">
+                                                <div class="input-group-text">
+                                                    <a href="javascript:showPassword()"><i id="iTag" class="fa fa-eye-slash" aria-hidden="true"></i></a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="form-group" id="ResetPassword">
-                                    <button type="button" class="btn btn-primary" id="btnResetPassword" onclick="return ResetPassword();">Reset Password</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <div class="form-group" id="ResetPassword">
+                                        <button type="button" class="btn btn-primary" id="btnResetPassword" onclick="return ResetPassword();">Reset Password</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
                                 </div>
                             </div>
-
-                            <!-- /.card-body -->
                         </div>
-                        <!-- /.card -->
-
                     </div>
-                </div>
-
+                </form>
             </div>
+
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" id="btnAdd" onclick="Add();">Add</button>
                 <button type="button" class="btn btn-primary" id="btnUpdate" style="display:none;" onclick="Update();">Update</button>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
-
         </div>
     </div>
 </div>

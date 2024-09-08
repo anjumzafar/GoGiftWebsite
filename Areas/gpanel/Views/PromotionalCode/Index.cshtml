@@ -6,8 +6,9 @@
 @section Header {
 @*     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css">
  *@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-2.1.4/datatables.min.css">
-    <link rel="stylesheet" href="/gpanel/Content/plugins/daterangepicker/daterangepicker.css">
+   @*  <link rel="stylesheet" href="/gpanel/Content/plugins/daterangepicker/daterangepicker.css"> *@
 }
 @section PageHeaderName {
 
@@ -68,70 +69,80 @@
         <tbody class="tbody"></tbody>
     </table>
 </div>
+
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                @*<button type="button" class="close" data-dissmiss="modal"><span aria-hidden="true">&times;</span></button>*@
                 <h4 class="modal-title" id="myModalLabel">Add Promocode</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-
             </div>
             <div class="modal-body">
                 <form>
-                    <div class="form-group">
-                        <label asp-for="PromotionalCodeID"></label>
-                        <input asp-for="PromotionalCodeID" placeholder="PromotionalCodeID" disabled="disabled" />
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="PromotionalCode">PromotionalCode</label>
-                        <input asp-for="PromotionalCode" placeholder="PromotionalCode" />
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="PromotionalDiscount"></label>
-                        <input asp-for="PromotionalDiscount" placeholder="PromotionalDiscount" />
-                    </div>
-                    <div class="form-group">
-                        <label for="State">DiscountType</label>
-                        <select id="DiscountType" class="form-control">
-                            <option>Flat</option>
-                            <option>Percentage</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="PromotionalType">PromotionalType</label>
-                        <select id="PromotionalType" class="form-control"></select>
-                    </div>
-
-
-                    <div class="form-group">
-                        <label asp-for="MinimumCartValue"></label>
-                        <input asp-for="MinimumCartValue" placeholder="MinimumCartValue" />
-                    </div>
-
-                    <div class="form-group">
-                        <label asp-for="MaximumDiscount"></label>
-                        <input asp-for="MaximumDiscount" placeholder="MaximumDiscount" />
-                    </div>
-
-                    <div class="form-group">
-                        <label for="ExpiryDate">ExpiryDate</label>
-                        <div class="input-group date" id="ExpiryDate" data-target-input="nearest">
-                            <input type="text" id="ExpiryDate" placeholder="ExpiryDate" class="form-control datetimepicker-input" data-target="#ExpiryDate" />
-                            <div class="input-group-append" data-target="#ExpiryDate" data-toggle="datetimepicker">
-                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="PromotionalCodeID"></label>
+                                <input asp-for="PromotionalCodeID" placeholder="PromotionalCodeID" class="form-control" disabled="disabled" />
                             </div>
                         </div>
-
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="PromotionalCode">PromotionalCode</label>
+                                <input asp-for="PromotionalCode" placeholder="PromotionalCode" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="PromotionalDiscount"></label>
+                                <input asp-for="PromotionalDiscount" placeholder="PromotionalDiscount" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="DiscountType">DiscountType</label>
+                                <select id="DiscountType" class="form-control">
+                                    <option>Flat</option>
+                                    <option>Percentage</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="PromotionalType">PromotionalType</label>
+                                <select id="PromotionalType" class="form-control"></select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="MinimumCartValue"></label>
+                                <input asp-for="MinimumCartValue" placeholder="MinimumCartValue" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="MaximumDiscount"></label>
+                                <input asp-for="MaximumDiscount" placeholder="MaximumDiscount" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="ExpiryDate">ExpiryDate</label>
+                                <div class="input-group date" id="PromoCodeExpiryDate" data-target-input="nearest">
+                                    <input type="text" id="ExpiryDate" placeholder="ExpiryDate" class="form-control datetimepicker-input" data-target="#PromoCodeExpiryDate" />
+                                    <div class="input-group-append" data-target="#PromoCodeExpiryDate" data-toggle="datetimepicker">
+                                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="Remark">Remark</label>
+                                <input type="text" class="form-control" id="Remark" placeholder="Remark" />
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="Remark">Remark</label>
-                        <input type="text" class="form-control" id="Remark" placeholder="Remark" />
-                    </div>
-
-
                 </form>
             </div>
             <div class="modal-footer">
@@ -142,6 +153,9 @@
         </div>
     </div>
 </div>
+
+
+
 @section Footer {
 
     <script src="/gpanel/Content/script/PromotionalCode.js"></script>
@@ -152,4 +166,26 @@
 
     <!-- Tempusdominus Bootstrap 4 -->
     <script src="/gpanel/Content/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+
+  
+
+    <script>
+        $(function () {
+            $('#PromoCodeExpiryDate').datetimepicker({
+                format: 'DD/MMM/YYYY', // Updated format to show day, abbreviated month, and year (e.g., 25/Sep/2024)
+                icons: {
+                    time: 'fa fa-clock',
+                    date: 'fa fa-calendar',
+                    up: 'fa fa-chevron-up',
+                    down: 'fa fa-chevron-down',
+                    previous: 'fa fa-chevron-left',
+                    next: 'fa fa-chevron-right',
+                    today: 'fa fa-calendar-check',
+                    clear: 'fa fa-trash',
+                    close: 'fa fa-times'
+                }
+            });
+        });
+    </script>
+
 }
