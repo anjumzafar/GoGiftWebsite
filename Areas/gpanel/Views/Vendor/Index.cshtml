@@ -1,37 +1,34 @@
-﻿@model GoGiftWebsite.Areas.gpanel.Models.TblCustomers;
+﻿@model GoGiftWebsite.Areas.gpanel.Models.TblVendors;
 
 @{
-    ViewBag.Title = "Customer List";
+    ViewBag.Title = "Vendor List";
 }
 
 @section Header {
-    
-  @*   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"> *@
+
+    @*   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"> *@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-2.1.4/datatables.min.css">
 }
 
 @section PageHeaderName {
-    <h2>Customer List</h2>
+    <h2>Vendor List</h2>
 }
 @section PageBreadcum {
     <ol class="breadcrumb float-sm-right">
         <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item active">Customer</li>
+        <li class="breadcrumb-item active">Vendor</li>
     </ol>
 }
 <div class="form-horizontal">
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="clearTextBox();">Add New Customer</button><br /><br />
-    <table id="Customertable" class="table table-bordered table-hover">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="clearTextBox();">Add New Vendor</button><br /><br />
+    <table id="Vendortable" class="table table-bordered table-hover">
         <thead>
             <tr>
                 <th>
-                    CustomerID
+                    VendorID
                 </th>
                 <th>
-                    CustomerName
-                </th>
-                <th>
-                    STDCode
+                    VendorName
                 </th>
                 <th>
                     MobileNo
@@ -64,72 +61,104 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="myModalLabel">Add Customer</h4>
+                <h4 class="modal-title" id="myModalLabel">Add Vendor</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
 
             <div class="modal-body">
                 <form>
                     <div class="row">
-                        <!-- Customer Details Column 1 -->
+                        <!-- Vendor Details Column 1 -->
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label asp-for="CustomerID">Customer ID</label>
-                                <input asp-for="CustomerID" class="form-control" placeholder="CustomerID" disabled="disabled" />
+                                <label asp-for="VendorID">Vendor ID</label>
+                                <input asp-for="VendorID" class="form-control" placeholder="VendorID" disabled="disabled" />
+                            </div>
+                            
+                            <div class="form-group">
+                                <label asp-for="VendorName">Vendor Name</label>
+                                <input asp-for="VendorName" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label asp-for="CustomerName">Customer Name</label>
-                                <input asp-for="CustomerName" class="form-control">
+                                <label asp-for="CompanyName"> </label>
+                                <input asp-for="CompanyName" class="form-control">
                             </div>
+                           
                             <div class="form-group">
-                                <label asp-for="Gender">Gender</label>
-                                <input asp-for="Gender" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label asp-for="MobileNo">Mobile No</label>
+                                <label asp-for="MobileNo">MobileNo</label>
                                 <input asp-for="MobileNo" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label asp-for="City">City</label>
-                                <input asp-for="City" class="form-control">
+                                <label asp-for="Address"></label>
+                                <input asp-for="Address" class="form-control">
                             </div>
+                            
                             <div class="form-group">
                                 <label asp-for="State">State</label>
                                 <input asp-for="State" class="form-control">
                             </div>
-                        </div>
-
-                        <!-- Customer Details Column 2 -->
-                        <div class="col-md-6">
                             <div class="form-group">
-                                <label asp-for="DOB">Date of Birth</label>
-                                <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                                    <input type="text" id="DOB" placeholder="DOB" class="form-control datetimepicker-input" data-target="#reservationdate" />
-                                    <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label asp-for="STDCode">STD Code</label>
-                                <input asp-for="STDCode" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label asp-for="Address">Address</label>
-                                <input asp-for="Address" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label asp-for="Pincode">Pincode</label>
-                                <input asp-for="Pincode" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label asp-for="Country">Country</label>
+                                <label asp-for="Country"></label>
                                 <input asp-for="Country" class="form-control" value="India">
                             </div>
+                            <div class="form-group">
+                                <label asp-for="AccountName"></label>
+                                <input asp-for="AccountName" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="BankName"></label>
+                                <input asp-for="BankName" class="form-control">
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Login Details Section -->
+                        <!-- Vendor Details Column 2 -->
+                        <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="CCEmailID"></label>
+                            <input asp-for="CCEmailID" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="VendorDisplayName"></label>
+                            <input asp-for="VendorDisplayName" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="ContactPerson"></label>
+                            <input asp-for="ContactPerson" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="AlternateNo"></label>
+                            <input asp-for="AlternateNo" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="City">City</label>
+                            <input asp-for="City" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Pincode"></label>
+                            <input asp-for="Pincode" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Priority"></label>
+                            <input asp-for="Priority" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="AccountNo"></label>
+                            <input asp-for="AccountNo" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Branch"></label>
+                            <input asp-for="Branch" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="IFSCCode"></label>
+                            <input asp-for="IFSCCode" class="form-control">
+                        </div>
+                            
+                        </div>
+
+                    </div>
+                    <!-- Bank Details Section -->
                     <div class="row">
                         <div class="col-12">
                             <div class="card card-primary">
@@ -177,13 +206,13 @@
     </div>
 </div>
 @section Footer {
-    <script src="/gpanel/Content/script/Customer.js"></script>
+    <script src="/gpanel/Content/script/Vendor.js"></script>
     <!-- InputMask -->
     <script src="/gpanel/Content/plugins/moment/moment.min.js"></script>
     <!-- Tempusdominus Bootstrap 4 -->
     <script src="/gpanel/Content/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-    
-   @*  <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script> *@
+
+    @*  <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script> *@
     <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/v/dt/dt-2.1.4/datatables.min.js"></script>
 }
 

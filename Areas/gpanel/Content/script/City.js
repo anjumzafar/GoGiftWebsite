@@ -100,6 +100,7 @@ function getbyID(CityID) {
             $('#City').val(result.City);
             $('#DeliveryCharge').val(result.DeliveryCharge);
             $('#IsMidNightDeliveryPossible').val(result.IsMidNightDeliveryPossible);
+            $('#IsActive').val(result.IsActive);
             $('#myModal').modal('show');
             $('#myModalLabel').text('Update City');
             $('#btnUpdate').show();

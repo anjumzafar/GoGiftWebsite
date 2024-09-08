@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using GoGiftWebsite.Areas.gpanel.Models;
 using GoGiftWebsite.Areas.gpanel.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace GoGiftWebsite.Areas.gpanel.Controllers
 {
     [Area("gpanel")]
+    [Authorize]
     public class CityController : Controller
     {
         private ApplicationDbContext Context { get; }

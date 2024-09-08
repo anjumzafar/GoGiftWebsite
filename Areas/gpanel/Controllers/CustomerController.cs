@@ -1,11 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using GoGiftWebsite.Areas.gpanel.Data;
 using GoGiftWebsite.Areas.gpanel.Models;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace GoGiftWebsite.Areas.gpanel.Controllers
 {
     [Area("gpanel")]
+    [Authorize]
     public class CustomerController : Controller
     {
             private ApplicationDbContext Context { get; }
@@ -20,14 +22,19 @@ namespace GoGiftWebsite.Areas.gpanel.Controllers
                 return View();
             }
 
-            //[HttpPost]
-            //public IActionResult Index(string customerName)
-            //{
-            //    List<Customer> customers = this.Context.SearchCustomers(customerName).ToList();
-            //    return View(customers);
-            //}
-            //This controller is called by JQuery to Load DataTable with Customer data
-            public JsonResult List()
+        public IActionResult Details()
+        {
+            return View();
+        }
+
+        //[HttpPost]
+        //public IActionResult Index(string customerName)
+        //{
+        //    List<Customer> customers = this.Context.SearchCustomers(customerName).ToList();
+        //    return View(customers);
+        //}
+        //This controller is called by JQuery to Load DataTable with Customer data
+        public JsonResult List()
             {
                 // List<Customer> customers = Context.Customers.ToList();
                 return Json(Context.Customer.ToList());

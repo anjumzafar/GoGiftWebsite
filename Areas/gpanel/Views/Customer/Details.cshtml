@@ -1,0 +1,222 @@
+﻿@model GoGiftWebsite.Areas.gpanel.Models.TblCustomers;
+
+@{
+    ViewBag.Title = "Customer List";
+}
+@section Header {
+
+    @*   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"> *@
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-2.1.4/datatables.min.css">
+}
+
+@section PageHeaderName {
+    <h2>Customer Details</h2>
+}
+@section PageBreadcum {
+    <ol class="breadcrumb float-sm-right">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active">Customer Details</li>
+    </ol>
+}
+
+<div class="container mt-4">
+        <!-- Nav Tabs -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="customer-details-tab" data-toggle="tab" href="#customer-details" role="tab" aria-controls="customer-details" aria-selected="true">Customer Details</a>
+            </li>
+        <li class="nav-item">
+            <a class="nav-link" id="order-list-tab" data-toggle="tab" href="#order-list" role="tab" aria-controls="order-list" aria-selected="false">Order List</a>
+        </li>
+            <li class="nav-item">
+                <a class="nav-link" id="recipient-address-tab" data-toggle="tab" href="#recipient-address" role="tab" aria-controls="recipient-address" aria-selected="false">Recipient Address Details</a>
+            </li>
+        
+            <li class="nav-item">
+                <a class="nav-link" id="customer-point-tab" data-toggle="tab" href="#customer-point" role="tab" aria-controls="customer-point" aria-selected="false">Customer Points</a>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="myTabContent">
+            <!-- First Tab: Customer Details -->
+            <div class="tab-pane fade show active" id="customer-details" role="tabpanel" aria-labelledby="customer-details-tab">
+                <div class="mt-4">
+                    <form>
+                        <div class="row">
+                            <!-- Customer Details Column 1 -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="CustomerID">Customer ID</label>
+                                    <input asp-for="CustomerID" class="form-control" placeholder="CustomerID" disabled="disabled" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="CustomerName">Customer Name</label>
+                                    <input asp-for="CustomerName" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Gender">Gender</label>
+                                    <input asp-for="Gender" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="City">City</label>
+                                    <input asp-for="City" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="State">State</label>
+                                    <input asp-for="State" class="form-control">
+                                </div>
+                            </div>
+
+                            <!-- Customer Details Column 2 -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="DOB">Date of Birth</label>
+                                    <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                                        <input type="text" id="DOB" placeholder="DOB" class="form-control datetimepicker-input" data-target="#reservationdate" />
+                                        <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- STD Code and Mobile No in same row -->
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label asp-for="STDCode">STD Code</label>
+                                        <input asp-for="STDCode" class="form-control" maxlength="6" style="max-width: 100%;">
+                                    </div>
+                                    <div class="form-group col-md-8">
+                                        <label asp-for="MobileNo">Mobile No</label>
+                                        <input asp-for="MobileNo" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Address">Address</label>
+                                    <input asp-for="Address" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Pincode">Pincode</label>
+                                    <input asp-for="Pincode" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Country">Country</label>
+                                    <input asp-for="Country" class="form-control" value="India">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Login Details Section -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card card-primary">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Login Details</h3>
+                                        <div class="card-tools">
+                                            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                                                <i class="fas fa-minus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label for="EmailID">Email ID</label>
+                                            <input id="EmailID" type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Password">Password</label>
+                                            <div class="input-group">
+                                                <input id="Password" type="text" class="form-control" placeholder="Password">
+                                                <div class="input-group-append" id="show_hide_password">
+                                                    <div class="input-group-text">
+                                                        <a href="javascript:showPassword()"><i id="iTag" class="fa fa-eye-slash" aria-hidden="true"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group" id="ResetPassword">
+                                            <button type="button" class="btn btn-primary" id="btnResetPassword" onclick="return ResetPassword();">Reset Password</button>
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        <!-- Second Tab: Order List Details -->
+        <div class="tab-pane fade" id="order-list" role="tabpanel" aria-labelledby="order-list-tab">
+            <div class="mt-4">
+                <table id="Ordertable" class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>OrderID</th>
+                            <th>Customer Name</th>
+                            <th>Recipient Name</th>
+                            <th>DeliveryCity</th>
+                            <th>DeliveryDate</th>
+                            <th>OrderStatus</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody"></tbody>
+                </table>
+            </div>
+        </div>
+
+            <!-- Third Tab: Recipient Address Details -->
+            <div class="tab-pane fade" id="recipient-address" role="tabpanel" aria-labelledby="recipient-address-tab">
+                <div class="mt-4">
+                    <table id="Customertable" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>CustomerID</th>
+                                <th>Recipient Name</th>
+                                <th>STDCode</th>
+                                <th>MobileNo</th>
+                                <th>City</th>
+                                <th>EmailID</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Fourth Tab: Customer Points Order Wise -->
+            <div class="tab-pane fade" id="customer-point" role="tabpanel" aria-labelledby="customer-point-tab">
+                <div class="mt-4">
+                    <table id="Customertable" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>CustomerID</th>
+                                <th>OrderID</th>
+                                <th>Recipient Name</th>
+                                <th>DeliveryCity</th>
+                                <th>Point</th>
+                                <th>Point Source</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap and jQuery scripts -->
+   @*  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script> *@
+
+
+@section Footer {
+    <script src="/gpanel/Content/script/Customer.js"></script>
+    <!-- InputMask -->
+    <script src="/gpanel/Content/plugins/moment/moment.min.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="/gpanel/Content/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    @*  <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script> *@
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/v/dt/dt-2.1.4/datatables.min.js"></script>
+}
