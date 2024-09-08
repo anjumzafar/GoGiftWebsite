@@ -1,5 +1,6 @@
 ﻿using GoGiftWebsite.Areas.gpanel.Data;
 using GoGiftWebsite.Areas.gpanel.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -7,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 namespace GoGiftWebsite.Areas.gpanel.Controllers
 {
     [Area("gpanel")]
+    [Authorize]
     public class PromotionalCodeController : Controller
     {
         private ApplicationDbContext Context { get; }

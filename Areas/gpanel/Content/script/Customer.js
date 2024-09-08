@@ -28,6 +28,7 @@ function loadData() {
                 columns: [
                     { 'data': 'CustomerID', 'autoWidth': true },
                     { 'data': 'CustomerName', 'autoWidth': true },
+                    { 'data': 'STDCode', 'autoWidth': true },
                     { 'data': 'MobileNo', 'autoWidth': true },
                     { 'data': 'City', 'autoWidth': true },
                     { 'data': 'EmailID', 'autoWidth': true },
@@ -149,6 +150,7 @@ function getbyID(CustomerID) {
             $('#CustomerName').val(result.CustomerName);
             $('#DOB').val(fnDateInFormat(result.DOB));
             $('#Gender').val(result.Gender);
+            $('#STDCode').val(result.STDCode);
             $('#MobileNo').val(result.MobileNo);
             $('#Address').val(result.Address);
             $('#City').val(result.City);

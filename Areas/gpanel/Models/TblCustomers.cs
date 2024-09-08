@@ -14,8 +14,9 @@ namespace GoGiftWebsite.Areas.gpanel.Models
         [DisplayName("Customer Name")]
         public required string CustomerName { get; set; }
         [DisplayFormat(DataFormatString = "{0:DD MMM YYYY}")]
-        public DateOnly? DOB { get; set; }
+  
         public string? Gender { get; set; }
+        public string? STDCode { get; set; }
         public string? MobileNo { get; set; }
         public string? Address { get; set; }
         public string? City { get; set; }
@@ -24,6 +25,7 @@ namespace GoGiftWebsite.Areas.gpanel.Models
         public string? Country { get; set; }
         public required string EmailID { get; set; }
         public required string Password { get; set; }
+        public DateOnly? DOB { get; set; }
         [DisplayFormat(DataFormatString = "{0:DD/MMM/YYYY}")]
         public DateOnly CreatedOn { get; set; } = DateOnly.FromDateTime(DateTime.Now);
         public bool IsActive { get; set; } = true;
