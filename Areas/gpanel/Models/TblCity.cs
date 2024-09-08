@@ -11,7 +11,6 @@ namespace GoGiftWebsite.Areas.gpanel.Models
         [Required]
         [MaxLength(50)]
         public required string City { get; set; }
-        public int CategoryID { get; set; }
         public int DeliveryCharge { get; set; }
         public bool IsMidNightDeliveryPossible { get; set; } = true;
         public bool IsActive { get; set; } = true;

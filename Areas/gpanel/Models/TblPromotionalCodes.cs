@@ -11,8 +11,9 @@ namespace GoGiftWebsite.Areas.gpanel.Models
         public string? PromotionalCode { get; set; }
         public int PromotionalDiscount { get; set; }
         public string? DiscountType { get; set; }
-        [ForeignKey("PromotionalTypeID")]
+      
         public int PromotionalTypeID { get; set; }
+        [ForeignKey("DDValueID")]
         public TblDDValues? DDValue { get; set; }
         public int MinimumCartValue { get; set; }
         public int MaximumDiscount { get; set; }
