@@ -33,7 +33,6 @@ function loadData() {
                 columns: [
                     { 'data': 'CityID', 'autoWidth': true },
                     { 'data': 'City', 'autoWidth': true },
-                    { 'data': 'CategoryID', 'autoWidth': true },
                     { 'data': 'DeliveryCharge', 'autoWidth': true },
                     { 'data': 'IsMidNightDeliveryPossible', 'autoWidth': true },
                     {
@@ -57,33 +56,33 @@ function loadData() {
 }
 
 //Add Data Function
-function Add() {
-    var res = validate();
-    if (res == false) {
-        return false;
-    }
-    var CityObj = {
-        CityID: $('#CityID').val(),
-        City: $('#City').val(),
-        CategoryID: $('#CategoryID').val(),
-        DeliveryCharge: $('#DeliveryCharge').val(),
-        iIsMidNightDeliveryPossible:$('#IsMidNightDeliveryPossible').is(":checked")
-       // IsMidNightDeliveryPossible: $('#IsMidNightDeliveryPossible').val()
-    };
-    $.ajax({
-        url: "/gpanel/City/Add",
-        data: CityObj,
-        type: "POST",
-        //contentType: "application/json;charset=utf-8",
-        //dataType: "json",
-        success: function (result) {
-            $('#myModal').modal('hide');
-        },
-        error: function (errormessage) {
-            alert(errormessage.responseText);
-        }
-    });
-}
+//function Add() {
+//    var res = validate();
+//    if (res == false) {
+//        return false;
+//    }
+//    var CityObj = {
+//        CityID: $('#CityID').val(),
+//        City: $('#City').val(),
+//        CategoryID: $('#CategoryID').val(),
+//        DeliveryCharge: $('#DeliveryCharge').val(),
+//        iIsMidNightDeliveryPossible:$('#IsMidNightDeliveryPossible').is(":checked")
+//       // IsMidNightDeliveryPossible: $('#IsMidNightDeliveryPossible').val()
+//    };
+//    $.ajax({
+//        url: "/gpanel/City/Add",
+//        data: CityObj,
+//        type: "POST",
+//        //contentType: "application/json;charset=utf-8",
+//        //dataType: "json",
+//        success: function (result) {
+//            $('#myModal').modal('hide');
+//        },
+//        error: function (errormessage) {
+//            alert(errormessage.responseText);
+//        }
+//    });
+//}
 
 //Function for getting the Data Based upon City ID
 function getbyID(CityID) {
@@ -100,7 +99,6 @@ function getbyID(CityID) {
         success: function (result) {
             $('#CityID').val(result.CityID);
             $('#City').val(result.City);
-            $('#CategoryID').val(result.CategoryID);
             $('#DeliveryCharge').val(result.DeliveryCharge);
             $('#IsMidNightDeliveryPossible').val(result.IsMidNightDeliveryPossible);
             $('#myModal').modal('show');
@@ -153,7 +151,6 @@ function Update() {
     var CityObj = {
         CityID: $('#CityID').val(),
         City: $('#City').val(),
-        CategoryID: $('#CategoryID').val(),
         DeliveryCharge: $('#DeliveryCharge').val(),
         IsMidNightDeliveryPossible: $('#IsMidNightDeliveryPossible').val()
     };
@@ -167,7 +164,6 @@ function Update() {
             $('#myModal').modal('hide');
             $('#CityID').val("");
             $('#City').val("");
-            $('#CategoryID').val("");
             $('#DeliveryCharge').val("");
             $('#IsMidNightDeliveryPossible').val("");
         },
@@ -200,7 +196,6 @@ function Delele(ID) {
 function clearTextBox() {
     $('#CityID').val("");
     $('#City').val("");
-    $('#CategoryID').val("");
     $('#DeliveryCharge').val("");
     $('#IsMidNightDeliveryPossible').val("");
     $('#btnUpdate').hide();
@@ -221,13 +216,8 @@ function validate() {
     else {
         $('#City').css('border-color', 'lightgrey');
     }
-    if ($('#CategoryID').val().trim() == "") {
-        $('#CategoryID').css('border-color', 'Red');
-        isValid = false;
-    }
-    else {
-        $('#CategoryID').css('border-color', 'lightgrey');
-    }
+  
+   
     if ($('#DeliveryCharge').val().trim() == "") {
         $('#DeliveryCharge').css('border-color', 'Red');
         isValid = false;

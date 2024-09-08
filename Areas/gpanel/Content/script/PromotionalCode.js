@@ -29,7 +29,7 @@ function ActiveTab() {
 
 function loadData() {
     $.ajax({
-        url: "/PromotionalCode/List",
+        url: "/gpanel/PromotionalCode/List",
         type: "GET",
         contentType: "application/json;charset=utf-8",
         dataType: "json",
@@ -75,7 +75,7 @@ function loadData() {
 
 function FillData() {
     $.ajax({
-        url: "/PromotionalCode/DDValueList",
+        url: "/gpanel/PromotionalCode/DDValueList",
         type: "GET",
         dataType: "json",
         success: function (data) {
@@ -185,7 +185,7 @@ function Update() {
     };
     
     $.ajax({
-        url: "/PromotionalCode/Update",
+        url: "/gpanel/PromotionalCode/Update",
         data: PromocodeObj,
         type: "POST",
         //contentType: "application/json;charset=utf-8",
@@ -213,7 +213,7 @@ function Delele(ID) {
     var ans = confirm("Are you sure you want to delete this Record?");
     if (ans) {
         $.ajax({
-            url: "/PromotionalCode/Delete/" + ID,
+            url: "/gpanel/PromotionalCode/Delete/" + ID,
             type: "POST",
             contentType: "application/json;charset=UTF-8",
             dataType: "json",
@@ -232,7 +232,7 @@ function PromotionalCodeAction(ID, ctrl) {
     var ans = confirm("Are you sure you want to change the state of this Record?");
     if (ans) {
         $.ajax({
-            url: "/PromotionalCode/PromotionalCodeAction/" + ID,
+            url: "/gpanel/PromotionalCode/PromotionalCodeAction/" + ID,
             type: "POST",
             contentType: "application/json;charset=UTF-8",
             dataType: "json",

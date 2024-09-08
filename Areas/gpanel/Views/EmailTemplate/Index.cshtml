@@ -3,7 +3,8 @@
 }
 
 @section Header {
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    @* <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"> *@
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-2.1.4/datatables.min.css">
 }
 
 @section PageHeaderName {
@@ -64,8 +65,12 @@
 
 @section Footer {
 
+
     <script src="~/js/EmailTemplate.js"></script>
-    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+@*     <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+ *@
+
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/v/dt/dt-2.1.4/datatables.min.js"></script>
     <script type="text/javascript">
         @Html.Raw(ViewBag.JavaScriptFunction)
     </script>
