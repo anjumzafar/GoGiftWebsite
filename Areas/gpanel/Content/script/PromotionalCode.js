@@ -41,7 +41,7 @@ function loadData() {
                     { 'data': 'PromotionalCode', 'autoWidth': true },
                     { 'data': 'PromotionalDiscount', 'autoWidth': true },
                     { 'data': 'DiscountType', 'autoWidth': true },
-                    { 'data': 'PromotionalTypeID', 'autoWidth': true },
+                    { 'data': 'TblDDValue.DDValue', 'autoWidth': true },
                     { 'data': 'MinimumCartValue', 'autoWidth': true },
                     { 'data': 'MaximumDiscount', 'autoWidth': true },
                     {

@@ -15,7 +15,8 @@ namespace GoGiftWebsite.Areas.gpanel.Models
         public int PromotionalTypeID { get; set; }
 
         [ForeignKey("PromotionalTypeID")]
-        public virtual TblDDValues? DDValue { get; set; }
+        public virtual TblDDValues? TblDDValue { get; set; }
+
         public int MinimumCartValue { get; set; }
         public int MaximumDiscount { get; set; }
         [DisplayFormat(DataFormatString = "{DD/MM/YYYY}")]

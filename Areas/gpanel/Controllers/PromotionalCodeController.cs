@@ -22,7 +22,7 @@ namespace GoGiftWebsite.Areas.gpanel.Controllers
         public JsonResult List()
         {
             //List<PromotionalCodes> PromotionalCode = Context.PromotionalCode.ToList();
-            return Json(Context.PromotionalCode.Include(u => u.DDValue).ToList());
+            return Json(Context.PromotionalCode.Include(u => u.TblDDValue).ToList());
         }
 
         [HttpPost]
