@@ -136,7 +136,7 @@ function getbyID(PromotionalCodeID) {
     $('#Remark').css('border-color', 'lightgrey');
     $('#IsActive').css('border-color', 'lightgrey');
     $.ajax({
-        url: "/PromotionalCode/getbyID/" + PromotionalCodeID,
+        url: "/gpanel/PromotionalCode/GetbyID/" + PromotionalCodeID,
         typr: "GET",
         contentType: "application/json;charset=UTF-8",
         dataType: "json",
