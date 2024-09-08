@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+@section Header {
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+}
+
+@section PageHeaderName {
+
+
+}
+@section PageBreadcum {
+    <ol class="breadcrumb float-sm-right">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active">EmailTemplate</li>
+    </ol>
+}
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">EmailTemplate List</h3>
+
+        <div class="card-tools">
+
+            <a class="btn btn-info btn-sm" href="~/EmailTemplate/Create">
+                <i class="fa fa-plus">
+                    Add New EmailTemplate
+                </i>
+
+            </a>
+        </div>
+    </div>
+
+    <table id="EmailTemplateTable" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>
+                    EmailTemplateID
+                </th>
+                <th>
+                    ModuleName
+                </th>
+                <th>
+                    EmailTitle
+                </th>
+                <th>
+                    FromEmail
+                </th>
+                <th>
+                    SMTPServer
+                </th>
+                <th>
+                    IsActive
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody class="tbody"></tbody>
+    </table>
+</div>
+
+@section Footer {
+
+    <script src="~/js/EmailTemplate.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript">
+        @Html.Raw(ViewBag.JavaScriptFunction)
+    </script>
+}
+
+

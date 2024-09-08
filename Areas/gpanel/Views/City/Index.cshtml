@@ -1,0 +1,115 @@
+﻿@model GoGiftWebsite.Areas.gpanel.Models.TblCity;
+
+@{
+    ViewBag.Title = "City List";
+}
+
+@section Header {
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+}
+
+@section PageHeaderName {
+    <h2>City List</h2>
+}
+@section PageBreadcum {
+    <ol class="breadcrumb float-sm-right">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active">City</li>
+    </ol>
+}
+<div class="form-horizontal">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="clearTextBox();">Add New City </button><br /><br />
+    <table id="Citytable" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>
+                    CityID
+                </th>
+                <th>
+                    City
+                </th>
+                <th>
+                    CategoryID
+                </th>
+                <th>
+                    DeliveryCharge
+                </th>
+                <th>
+                    IsMidNightDeliveryPossible
+                </th>
+                <th>
+                    IsActive
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody class="tbody"></tbody>
+    </table>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Add City</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <form id="AddCustomer">
+                <div class="modal-body">
+
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">City Details</h3>
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label asp-for="CityID"></label>
+                                        <input asp-for="CityID" placeholder="CityID" disabled="disabled" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="City"></label>
+                                        <input asp-for="City" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="CategoryID"></label>
+                                        <input asp-for="CategoryID" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="DeliveryCharge"></label>
+                                        <input asp-for="DeliveryCharge" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="IsMidNightDeliveryPossible"></label>
+                                        <input asp-for="IsMidNightDeliveryPossible" class="form-control">
+                                    </div>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+
+                        </div>
+                    </div>
+                 </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="btnAdd" onclick="Add();">Add</button>
+                    <button type="button" class="btn btn-primary" id="btnUpdate" style="display:none;" onclick="Update();">Update</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@section Footer {
+
+    <script src="~/js/City.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+}

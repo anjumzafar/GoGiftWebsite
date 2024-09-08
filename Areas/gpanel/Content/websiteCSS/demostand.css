@@ -1,0 +1,650 @@
+.OrderPointCourierTime_Root_18SQT {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  margin-top: 8px;
+}
+@media (max-width: 885px) {
+  .OrderPointCourierTime_Root_18SQT {
+    margin-top: 10px;
+  }
+}
+.OrderPointCourierTime_Icon_1_0oP {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.EtaTime_Eta_1jXKv {
+  margin-top: 8px;
+  margin-bottom: 24px;
+  display: flex;
+}
+.EtaTime_Eta_1jXKv:before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+  background-image: url(../images/9f3ef5202348cb9badbfcda5c2d2e04c.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.OrderPointPhone_Root_2TkCQ {
+  display: flex;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 3px;
+}
+.OrderPointPhone_Prefix_3-Erx {
+  font-size: 15px;
+  padding: 8px 0 8px 12px;
+  color: #333c4e;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .OrderPointPhone_Prefix_3-Erx {
+    font-size: 13px;
+    padding-top: 10px;
+  }
+}
+.OrderPointPhone_InputCont_20iW0 {
+  flex-grow: 1;
+}
+.OrderPointPhone_InputCont_20iW0 input {
+  width: 100%;
+  padding: 6px 12px 6px 5px;
+  font-size: 15px;
+  height: 38px;
+  border: none;
+  color: #2d2928;
+}
+@media (max-width: 768px) {
+  .OrderPointPhone_InputCont_20iW0 input {
+    font-size: 13px;
+  }
+}
+
+.OrderSelect_Root_2bUCM {
+  position: relative;
+}
+.OrderSelect_Label_2YJi- {
+  height: 38px;
+  font-size: 15px;
+  padding: 7px 22px 7px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  user-select: none;
+  background: #ffffff;
+  white-space: nowrap;
+  color: #2d2928;
+  display: inline-flex;
+  align-items: baseline;
+  width: 100%;
+}
+.OrderSelect_Label_2YJi-:after {
+  top: 15px;
+  right: 8px;
+  font-size: 10px;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  content: '\E90C';
+  position: absolute;
+  color: #969493;
+  transition: all 0.2s;
+}
+@media (max-width: 768px) {
+  .OrderSelect_Label_2YJi- {
+    font-size: 13px;
+    padding-top: 10px;
+  }
+}
+.OrderSelect_DisabledLabel_2uoXQ {
+  background: #f4f4f4;
+}
+.OrderSelect_Select_2J0MY {
+  margin-top: 1px;
+  padding: 0;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px #808080;
+  background: white;
+  position: absolute;
+  z-index: 103;
+  max-height: 350px;
+  overflow: auto;
+  width: 100%;
+}
+.OrderSelect_DisabledSelect_2kSND {
+  background: #f4f4f4;
+}
+.OrderSelect_Option_2aCmc {
+  min-height: 28px;
+  font-size: 15px;
+  cursor: pointer;
+  user-select: none;
+  padding: 2px 8px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.OrderSelect_Option_2aCmc:hover {
+  background: #dfe8fb;
+}
+.OrderSelect_selected_1JULO {
+  font-weight: bold;
+}
+.OrderSelect_opened_28Wco .OrderSelect_Label_2YJi- {
+  margin: -1px;
+  border: 1px solid #0048FF;
+  box-shadow: 0 0 0 2px hsla(223, 100%, 50%, 0.2);
+  padding-right: 20px;
+}
+.OrderSelect_opened_28Wco .OrderSelect_Label_2YJi-:after {
+  transform: rotate(180deg);
+}
+.OrderSelect_text_3lW7c {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.OrderSelect_stick_17DB7 {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  height: 100%;
+  justify-self: flex-end;
+  margin: 0 0 0 auto;
+  padding-left: 0;
+}
+.OrderSelect_stick_17DB7::before {
+  content: '\00a0';
+  display: inline-block;
+  width: 0;
+}
+
+.OrderBlockWithError_Root_xBX7b {
+  width: 100%;
+  z-index: 1;
+}
+.OrderBlockWithError_Error_3quWI {
+  padding-top: 8px;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0;
+  color: hsl(1, 85%, 60%);
+}
+
+.IncityPointSecondRow_Row_3ZboY {
+  padding: 8px 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .IncityPointSecondRow_Row_3ZboY {
+    flex-direction: column;
+    padding: 5px 8px;
+  }
+}
+.IncityPointSecondRow_Wrap_3412J {
+  flex-wrap: wrap;
+  padding-top: 0;
+}
+.IncityPointSecondRow_Wrap_3412J .IncityPointSecondRow_ApartmentPhone_2E9TW {
+  padding-top: 8px;
+}
+@media (max-width: 768px) {
+  .IncityPointSecondRow_Wrap_3412J {
+    padding: 5px 8px;
+  }
+}
+.IncityPointSecondRow_Apartment_1tDz- {
+  padding-bottom: 12px;
+  max-width: 290px;
+}
+@media (max-width: 768px) {
+  .IncityPointSecondRow_Apartment_1tDz- {
+    max-width: initial;
+  }
+}
+.IncityPointSecondRow_PhoneWrapper_MOFIS {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.IncityPointSecondRow_PhoneIcon_2_B2w {
+  background: url(../images/e0d62c78669de74c8bd3c8272eb0ade8.svg) 100% 0 no-repeat;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+}
+.IncityPointSecondRow_Phone_2rubp {
+  width: 160px;
+  margin-right: 8px;
+}
+.IncityPointSecondRow_Phone_2rubp.IncityPointSecondRow_WithIcon_2IauL {
+  width: 188px;
+}
+@media (max-width: 768px) {
+  .IncityPointSecondRow_Phone_2rubp {
+    margin-right: 0;
+    margin-bottom: 6px;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .IncityPointSecondRow_ApartmentPhone_2E9TW {
+    width: 100%;
+  }
+}
+.IncityPointSecondRow_CommonErrors_3O9F5 {
+  flex-basis: 100%;
+  margin-top: 8px;
+  color: #f04240;
+  font-size: 12px;
+  line-height: 12px;
+}
+@media (max-width: 768px) {
+  .IncityPointSecondRow_Times_1CwTQ {
+    margin-top: 4px;
+  }
+}
+@media (max-width: 580px) {
+  .IncityPointSecondRow_Times_1CwTQ {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .IncityPointSecondRow_Times_1CwTQ > .IncityPointSecondRow_TimeText_kedLM {
+    padding: 0 0 3px 0;
+    line-height: initial;
+  }
+}
+.IncityPointSecondRow_SliderWrapper_1-ZAm {
+  display: flex;
+  padding-left: 15px;
+  width: calc(100% - 160px);
+}
+@media (max-width: 1120px) {
+  .IncityPointSecondRow_SliderWrapper_1-ZAm {
+    width: calc(100% - 110px);
+  }
+}
+@media (max-width: 768px) {
+  .IncityPointSecondRow_SliderWrapper_1-ZAm {
+    width: 100%;
+    padding-left: 0;
+    flex-direction: column;
+  }
+}
+.IncityPointSecondRow_TimeWrapper_2ffaq {
+  display: flex;
+}
+.IncityPointSecondRow_TimeWrapper_2ffaq .IncityPointSecondRow_Time_5OSNM:first-child .IncityPointSecondRow_TimeText_kedLM {
+  display: none;
+}
+@media (max-width: 580px) {
+  .IncityPointSecondRow_TimeWrapper_2ffaq .IncityPointSecondRow_Time_5OSNM:first-child .IncityPointSecondRow_TimeText_kedLM {
+    display: block;
+  }
+}
+@media (max-width: 885px) {
+  .IncityPointSecondRow_TimeWrapper_2ffaq .IncityPointSecondRow_Time_5OSNM:not(:first-child) {
+    align-items: center;
+  }
+}
+@media (max-width: 580px) {
+  .IncityPointSecondRow_TimeWrapper_2ffaq .IncityPointSecondRow_Time_5OSNM:not(:first-child) {
+    margin-top: 10px;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 580px) {
+  .IncityPointSecondRow_TimeWrapper_2ffaq {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+.IncityPointSecondRow_Time_5OSNM {
+  display: flex;
+}
+@media (max-width: 580px) {
+  .IncityPointSecondRow_Time_5OSNM {
+    flex-direction: column;
+    width: 48%;
+  }
+  .IncityPointSecondRow_Time_5OSNM:first-child {
+    width: 100%;
+  }
+}
+.IncityPointSecondRow_TimeSelect_33kN8 {
+  width: 105px;
+}
+@media (max-width: 580px) {
+  .IncityPointSecondRow_TimeSelect_33kN8 {
+    width: 100%;
+  }
+}
+.IncityPointSecondRow_Slider_3OTii {
+  width: calc(100% - 112px);
+  margin-left: 12px;
+}
+@media (max-width: 768px) {
+  .IncityPointSecondRow_Slider_3OTii {
+    width: 100%;
+    margin-top: 13px;
+    margin-left: 0;
+  }
+}
+.IncityPointSecondRow_TimeText_kedLM {
+  margin: 0;
+  padding: 0 12px;
+  line-height: 40px;
+  white-space: nowrap;
+}
+@media (max-width: 885px) {
+  .IncityPointSecondRow_TimeText_kedLM {
+    padding: 0 12px;
+    font-size: 13px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 580px) {
+  .IncityPointSecondRow_TimeText_kedLM {
+    line-height: initial;
+    font-size: 12px;
+    padding: 0 0 3px 0px;
+  }
+}
+
+.dv-select-balance-top-up-method-modal__title {
+  font-size: 23px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.dv-select-balance-top-up-method-modal__list {
+  padding: 0;
+}
+.dv-select-balance-top-up-method-modal__list li {
+  list-style: none;
+  margin-bottom: 8px;
+}
+.dv-select-balance-top-up-method-modal__list li:last-child {
+  margin-bottom: 0;
+}
+
+.dv-invoice-balance-top-up-modal__title {
+  font-size: 23px;
+  text-align: center;
+}
+.dv-invoice-balance-top-up-modal__row {
+  margin-top: 8px;
+}
+
+.dv-bank-card-select {
+  width: 100%;
+  position: relative;
+}
+.dv-bank-card-select__head {
+  width: 100%;
+  display: flex;
+  height: 48px;
+  border: 1px solid #bbc1d2;
+  border-radius: 2px;
+  align-items: center;
+  cursor: pointer;
+  padding-left: 65px;
+}
+.dv-bank-card-select__head:after {
+  content: '';
+  background: url(../images/daa64bf8f2f2a1d302ffd8dc59eb0d55.svg) no-repeat center center;
+  position: absolute;
+  right: 0;
+  width: 32px;
+  height: 48px;
+}
+.dv-bank-card-select__head--opened {
+  border-radius: 2px 2px 0 0;
+}
+.dv-bank-card-select__head:focus {
+  background-color: #dadada;
+}
+.dv-bank-card-select__head:before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  width: 50px;
+  height: 32px;
+}
+.dv-bank-card-select__head--visa:before {
+    background: url('../images/payment_type/visa.svg') no-repeat center center;
+}
+.dv-bank-card-select__head--maestro:before {
+    background: url('../images/payment_type/maestro.svg') no-repeat center center;
+}
+.dv-bank-card-select__head--mastercard:before {
+    background: url('../images/payment_type/mastercard.svg') no-repeat center center;
+}
+.dv-bank-card-select__head--mir:before {
+    background: url('../images/payment_type/mir.svg') no-repeat center center;
+}
+.dv-bank-card-select__head--dinners:before {
+    background: url('../images/payment_type/dinners.svg') no-repeat center center;
+}
+.dv-bank-card-select__head--jcb:before {
+    background: url('../images/payment_type/jcb.svg') no-repeat center center;
+}
+.dv-bank-card-select__head--american-express:before {
+    background: url('../images/payment_type/american-express.svg') no-repeat center center;
+}
+.dv-bank-card-select__head--discover:before {
+    background: url('../images/payment_type/discover.svg') no-repeat center center;
+}
+.dv-bank-card-select__head--union-pay:before {
+    background: url('../images/payment_type/union-pay.svg') no-repeat center center;
+}
+.dv-bank-card-select__head--maestro:before {
+    background: url('../images/payment_type/maestro.svg') no-repeat center center;
+}
+.dv-bank-card-select__head--uac:before {
+    background: url('../images/payment_type/uac.svg') no-repeat center center;
+}
+.dv-bank-card-select__list {
+  width: 100%;
+  position: absolute;
+  background: #fff;
+  border: 1px solid #bbc1d2;
+  border-top: none;
+  border-radius: 0 0 2px 2px;
+  z-index: 1;
+}
+.dv-bank-card-select__item {
+  display: flex;
+  width: 100%;
+  height: 48px;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 1px solid #bbc1d2;
+  padding-left: 65px;
+}
+.dv-bank-card-select__item:hover {
+  background-color: #dadada;
+}
+.dv-bank-card-select__item:last-child {
+  border-bottom: none;
+}
+.dv-bank-card-select__item:before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  width: 50px;
+  height: 32px;
+}
+.dv-bank-card-select__item:focus {
+  background-color: #dadada;
+}
+.dv-bank-card-select__item--visa:before {
+    background: url('../images/payment_type/visa.svg') no-repeat center center;
+}
+.dv-bank-card-select__item--maestro:before {
+    background: url('../images/payment_type/maestro.svg') no-repeat center center;
+}
+.dv-bank-card-select__item--mastercard:before {
+    background: url('../images/payment_type/mastercard.svg') no-repeat center center;
+}
+.dv-bank-card-select__item--mir:before {
+    background: url('../images/payment_type/mir.svg') no-repeat center center;
+}
+.dv-bank-card-select__item--dinners:before {
+    background: url('../images/payment_type/dinners.svg') no-repeat center center;
+}
+.dv-bank-card-select__item--jcb:before {
+    background: url('../images/payment_type/jcb.svg') no-repeat center center;
+}
+.dv-bank-card-select__item--american-express:before {
+    background: url('../images/payment_type/american-express.svg') no-repeat center center;
+}
+.dv-bank-card-select__item--discover:before {
+    background: url('../images/payment_type/discover.svg') no-repeat center center;
+}
+.dv-bank-card-select__item--union-pay:before {
+    background: url('../images/payment_type/union-pay.svg') no-repeat center center;
+}
+.dv-bank-card-select__item--maestro:before {
+    background: url('../images/payment_type/maestro.svg') no-repeat center center;
+}
+.dv-bank-card-select__item--uac:before {
+    background: url('../images//payment_type/uac.svg') no-repeat center center;
+}
+
+.dv-bank-card-binding-modal {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #333c4e;
+}
+.dv-bank-card-binding-modal__title {
+  margin-bottom: 16px;
+  font-size: 23px;
+  line-height: normal;
+}
+.dv-bank-card-binding-modal__iframe {
+  width: 100%;
+  height: 600px;
+}
+@media (max-width: 768px) {
+  .dv-bank-card-binding-modal__iframe {
+    height: 100%;
+  }
+}
+
+.dv-bound-card-balance-top-up-modal__title {
+  font-size: 23px;
+  text-align: center;
+}
+.dv-bound-card-balance-top-up-modal__errors {
+  color: red;
+  text-align: center;
+}
+.dv-bound-card-balance-top-up-modal__row {
+  margin-top: 8px;
+}
+.dv-bound-card-balance-top-up-modal__row--line {
+  display: flex;
+  justify-content: space-between;
+}
+.dv-bound-card-balance-top-up-modal__cvv {
+  margin-left: 8px;
+  width: 80px;
+}
+
+.dv-paytm-balance-top-up-modal__title {
+  font-size: 23px;
+  text-align: center;
+}
+.dv-paytm-balance-top-up-modal__row {
+  margin-top: 8px;
+}
+
+.dv-paytm-external-modal {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #333c4e;
+}
+.dv-paytm-external-modal__title {
+  margin-bottom: 16px;
+  font-size: 23px;
+  line-height: normal;
+}
+.dv-paytm-external-modal__iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.dv-paytr-balance-top-up-modal__title {
+  font-size: 23px;
+  text-align: center;
+}
+.dv-paytr-balance-top-up-modal__row {
+  margin-top: 8px;
+}
+.dv-paytr-balance-top-up-modal__flex {
+  display: flex;
+}
+.dv-paytr-balance-top-up-modal__cvv {
+  width: 75px;
+  margin-left: 10px;
+}
+.dv-paytr-balance-top-up-modal__input {
+  height: 48px;
+  border: 1px solid #bbc1d2;
+}
+
+.BalanceTopUpResultModal_Body_3UXd4 {
+  margin: 16px 0;
+}
+
+.IPay88TopUpModal_Title_2CLdv {
+  font-size: 23px;
+  text-align: center;
+}
+.IPay88TopUpModal_Row_3kV3Y {
+  margin-top: 8px;
+}
+
+.RazorpayTopUpModal_Errors_1gUv1 {
+  color: red;
+  text-align: center;
+}
+.RazorpayTopUpModal_Title_3rC87 {
+  font-size: 23px;
+  text-align: center;
+}
+.RazorpayTopUpModal_Row_1NDJ8 {
+  margin-top: 8px;
+}
+
+.RazorpayExternalModal_Root_x2XTf {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #2d2928;
+  background-color: #ffffff;
+}
+.RazorpayExternalModal_Iframe_1DVAa {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  .RazorpayExternalModal_Iframe_1DVAa {
+    height: calc(100% - 7px);
+  }
+}
+

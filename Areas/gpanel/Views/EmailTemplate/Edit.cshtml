@@ -1,0 +1,115 @@
+﻿@*Receiving data from Controller*@
+@model GoGiftWebsite.Areas.gpanel.Models.TblEmailTemplates;
+@{
+    ViewBag.Title = "Edit";
+}
+
+@section Header {
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+}
+
+@section PageHeaderName {
+    <h1>Edit Template</h1>
+}
+@section PageBreadcum {
+    <ol class="breadcrumb float-sm-right">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active">EmailTemplate</li>
+    </ol>
+}
+<form id="EditEmailTemplate" method="post">
+    <input asp-for="EmailTemplateID" hidden />
+    <div class="container-fluid">
+        <div class="row">
+            <div class="card card-primary card-outline">
+                <div class="card-header">
+                    <h3 class="card-title">Edit Template</h3>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-6">
+                                <input asp-for="EmailTitle" class="form-control" placeholder="Email Title:" value="@Model.EmailTitle">
+                            </div>
+                            <div class="col-6">
+                                <select class="form-control" asp-for="ModuleName">
+                                    <option value="Customer" selected="@(Model.ModuleName == "Customer"? "selected" : "")">Customer</option>
+                                    <option value="Vendor" selected="@(Model.ModuleName == "Vendor" ? "selected" : "")">Vendor</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-6">
+                                <input asp-for="FromName" class="form-control" placeholder="From Name" value="@Model.FromName">
+                            </div>
+                            <div class="col-6">
+                                <input asp-for="FromEmail" class="form-control" placeholder="From Email" value="@Model.FromEmail">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-6">
+                                <input asp-for="CC" class="form-control" placeholder="CC:" value="@Model.CC">
+                            </div>
+                            <div class="col-6">
+                                <input asp-for="BCC" class="form-control" placeholder="BCC:" value="@Model.BCC">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="CustomSubject" class="form-control" placeholder="Subject:" value="@Model.CustomSubject">
+                    </div>
+                    <div class="form-group">
+                        <textarea asp-for="CustomBody" class="form-control" style="height: 300px">@Model.CustomBody</textarea>
+                    </div>
+                    <div class="form-group">
+                        <div class="btn btn-default btn-file">
+                            <i class="fas fa-paperclip"></i> Attachment
+                            <input type="file" name="attachment" asp-for="Attachment">
+                        </div>
+                        <p class="help-block">Max. 32MB</p>
+                    </div>
+                </div>
+                <!-- /.card-body -->
+                <div class="card-footer">
+                    <div class="float-right">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="far fa-envelope"></i> Save
+                        </button>
+                    </div>
+                    @*  <button type="reset" asp-controller="EmailTemplate" asp-action="Index" class="btn btn-secondary"><i class="fas fa-times"></i> Cancel</button> *@
+                </div>
+            </div>
+            <!-- /.card-footer -->
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div><!-- /.container-fluid -->
+</form>
+@section Footer {
+
+    <script src="~/js/EmailTemplate.js"></script>
+    <!-- Place the first <script> tag in your HTML's <head> -->
+    <script src="https://cdn.tiny.cloud/1/jso54obh9hx3n7f73l8a9xw4o6ovr3wltkclir7hriel5577/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <!-- Place the following <script> and <textarea> tags your HTML's <body> -->
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage advtemplate ai mentions tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss markdown',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+            tinycomments_mode: 'embedded',
+            tinycomments_author: 'Author name',
+            mergetags_list: [
+                { value: 'First.Name', title: 'First Name' },
+                { value: 'Email', title: 'Email' },
+            ],
+            ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
+        });
+    </script>
+
+}

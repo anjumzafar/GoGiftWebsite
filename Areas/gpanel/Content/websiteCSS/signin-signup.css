@@ -1,0 +1,367 @@
+.common_Row_mq_ng { margin-bottom: 32px; }
+.common_Row_mq_ng:last-child { margin-bottom: 24px; }
+@media (max-width: 768px) {
+  .common_Row_mq_ng { margin-bottom: 24px; }
+  .common_Row_mq_ng:last-child { margin-bottom: 16px; }
+}
+.common_RowTopMargin_3Yu5c { margin-top: 16px; }
+.common_RowText_2z7Lw { font-size: 16px; line-height: 22px; }
+@media (max-width: 768px) {
+  .common_RowText_2z7Lw { font-size: 14px; line-height: 20px; }
+}
+.common_RowPassword_3OrRp { margin-bottom: 8px; }
+.common_RowTitle_3YpeR { font-size: 24px; line-height: 32px; font-weight: bold; text-align: center; }
+@media (max-width: 768px) {
+  .common_RowTitle_3YpeR { font-size: 20px; line-height: 28px; }
+}
+.common_RowForgot_1g9nK { display: flex; justify-content: flex-end; }
+.common_Forgot_3oCsb { color: #008ab6 !important; }
+.common_Forgot_3oCsb:hover { color: #00b1e9 !important; }
+.common_Forgot_3oCsb:active { box-shadow: none !important; }
+.common_RowError_16cH2 { text-align: center; color: rgb(240, 66, 64); }
+.common_Buttons_1sjHn { display: flex; justify-content: center; }
+
+.common_Button_17HA4:active { box-shadow: none !important; }
+.SignUp_Row_3yn-4 { margin-bottom: 32px; }
+.SignUp_Row_3yn-4:last-child { margin-bottom: 24px; }
+@media (max-width: 768px) {
+  .SignUp_Row_3yn-4 { margin-bottom: 24px; }
+  .SignUp_Row_3yn-4:last-child { margin-bottom: 16px; }
+}
+
+.mytextbox {
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    height: 42px;
+    border-radius: 0;
+    border: solid 1px #bbc1d2;
+    font-size: 14px;
+}
+
+.buttonbg {
+    background-color: #008ab6;
+    border: none;
+    width: 100%;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+    .buttonbg:hover {
+        background-color: #00b1e9;
+    }
+
+.buttonnobg {
+    color: #008ab6;
+    border: none;
+    width: 100%;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+    .buttonnobg:hover {
+        color: #00b1e9;
+    }
+
+.input_mob_prefix {
+    font-size: 15px;
+    padding: 13px 0 8px 12px;
+    color: #333c4e;
+    line-height: 1.5;
+}
+.buttonnobgleft {
+    color: #008ab6;
+    position: relative;
+    text-align: end;
+    display: inline-block;
+    width: 100%;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 100px;
+    transition: background-color 0.2s linear, color 0.2s linear;
+    white-space: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+    .buttonnobgleft:hover {
+        color: #00b1e9;
+    }
+
+.SignUp_RowTopMargin_28E5p { margin-top: 16px; }
+.SignUp_RowText_2yrl7 { font-size: 16px; line-height: 22px; }
+@media (max-width: 768px) {
+  .SignUp_RowText_2yrl7 { font-size: 14px; line-height: 20px; }
+}
+.SignUp_RowPassword_kKFpD { margin-bottom: 8px; }
+.SignUp_RowTitle_1Waxv { font-size: 24px; line-height: 32px; font-weight: bold; text-align: center; }
+@media (max-width: 768px) {
+  .SignUp_RowTitle_1Waxv { font-size: 20px; line-height: 28px; }
+}
+.SignUp_RowForgot_fvb2p { display: flex; justify-content: flex-end; }
+.SignUp_Forgot_3koqA { color: #008ab6 !important; }
+.SignUp_Forgot_3koqA:hover { color: #00b1e9 !important; }
+.SignUp_Forgot_3koqA:active { box-shadow: none !important; }
+.SignUp_RowError_1DRtv { text-align: center; color: rgb(240, 66, 64); }
+.SignUp_Buttons_3a5m4 { display: flex; justify-content: center; }
+.SignUp_Button_e_W62 { font-weight: bold; }
+.SignUp_Button_e_W62:active { box-shadow: none !important; }
+.SignUp_RowWithText_2rRnC { margin-bottom: 20px; }
+@media (max-width: 768px) {
+  .SignUp_RowWithText_2rRnC { margin-bottom: 16px; }
+}
+.ForgotPasswordCompany_Row_2ubkg { margin-bottom: 32px; }
+.ForgotPasswordCompany_Row_2ubkg:last-child { margin-bottom: 24px; }
+@media (max-width: 768px) {
+  .ForgotPasswordCompany_Row_2ubkg { margin-bottom: 24px; }
+  .ForgotPasswordCompany_Row_2ubkg:last-child { margin-bottom: 16px; }
+}
+.ForgotPasswordCompany_RowTopMargin_1Y-2m { margin-top: 16px; }
+.ForgotPasswordCompany_RowText_21-GI { font-size: 16px; line-height: 22px; }
+@media (max-width: 768px) {
+  .ForgotPasswordCompany_RowText_21-GI { font-size: 14px; line-height: 20px; }
+}
+.ForgotPasswordCompany_RowPassword_37m75 { margin-bottom: 8px; }
+.ForgotPasswordCompany_RowTitle_3uK4u { font-size: 24px; line-height: 32px; font-weight: bold; text-align: center; }
+@media (max-width: 768px) {
+  .ForgotPasswordCompany_RowTitle_3uK4u { font-size: 20px; line-height: 28px; }
+}
+.ForgotPasswordCompany_RowForgot_1RSik { display: flex; justify-content: flex-end; }
+.ForgotPasswordCompany_Forgot_2ezlc { color: #008ab6 !important; }
+.ForgotPasswordCompany_Forgot_2ezlc:hover { color: #00b1e9 !important; }
+.ForgotPasswordCompany_Forgot_2ezlc:active { box-shadow: none !important; }
+.ForgotPasswordCompany_RowError_1ExK6 { text-align: center; color: rgb(240, 66, 64); }
+.ForgotPasswordCompany_Buttons_1QsRs { display: flex; justify-content: center; }
+.ForgotPasswordCompany_Button_-dINS { font-weight: bold; }
+.ForgotPasswordCompany_Button_-dINS:active { box-shadow: none !important; }
+.ForgotPasswordCompany_RowTitleWithText_3T1oW { margin-bottom: 16px; }
+@media (max-width: 768px) {
+  .ForgotPasswordCompany_RowTitleWithText_3T1oW { margin-bottom: 8px; }
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+
+.myModal{
+   display: none;
+   position: fixed;
+   z-index: 10;
+   left: 0;
+   top: 0;
+   height: 100%;
+   width: 100%;
+   background-color: rgba(0,0,0,0.5);
+}
+
+
+
+.myModal-content{
+   background-color: #f4f4f4;
+   margin: 10% auto;
+   padding:20px;
+   width: 100%;
+   max-width: 640px;
+   
+   box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+}
+
+
+
+.modal-header{
+   border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 10px;
+  align-items: center;
+}
+
+
+.insidebutton {
+    padding: 5px 24px;
+    line-height: 22px;
+    background-color: #008ab6;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+}
+
+.insidetext {
+    font-size: 15px;
+    width: 100%;
+    border: 0;
+}
+
+.typo{
+font-size: 24px;
+line-height: 32px;
+font-weight: bold;
+}
+.closeBtn1{
+color: #CCC;
+float: right;
+font-size: 30px;  
+
+}
+.closeBtn1:hover,.closeBtn1:focus{
+color: black;
+text-decoration: none;
+cursor: pointer;
+}
+.closeBtn2{
+color: #CCC;
+float: right;
+font-size: 30px;  
+
+}
+.closeBtn2:hover,.closeBtn2:focus{
+color: black;
+text-decoration: none;
+cursor: pointer;
+}
+
+.closeBtn3{
+color: #CCC;
+float: right;
+font-size: 30px;  
+
+}
+.closeBtn3:hover,.closeBtn3:focus{
+color: black;
+text-decoration: none;
+cursor: pointer;
+}
+
+.closeBtn4{
+color: #CCC;
+float: right;
+font-size: 30px;  
+
+}
+.closeBtn4:hover,.closeBtn4:focus{
+color: black;
+text-decoration: none;
+cursor: pointer;
+}
+
+
+.Region_List {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: calc(9 * 42px);
+  padding: 0;
+  margin-top: 12px;
+}
+.Region_Wrapper {
+  list-style: none;
+  padding-right: 24px;
+}
+.Region {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  height: 42px;
+  min-width: 172px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  color: #2d2928;
+}
+.Region:hover {
+  color: #008ab6;
+}
+.Region_Selected {
+  font-weight: bold;
+}
+
+.common_Row {
+  margin-bottom: 32px;
+}
+
+.Input_Root {
+position: relative;
+display: flex;
+flex-direction: column;
+width: 100%;
+color: #8c8a89;
+}
+.Input_Wrapper {
+border: 1px solid #d5d4d4;
+position: relative;
+width: 100%;
+border-radius: 4px !important;
+display: flex;
+background-color: #fff;
+transition: all 0.2s;
+}
+
+.Input_Wrapper:hover {
+border: 1px solid #564E4C;
+}
+
+.Input_InputWrapper {
+display: flex;
+flex-grow: 1;
+}
+
+.Input_Field {
+  font-size: 16px;
+  line-height: 22px;
+  display: block;
+  padding: 19px 12px 5px;
+  background: transparent;
+  color: #2d2928;
+  overflow: hidden;
+  border: 0;
+  outline: 0;
+  width: 100%;
+}
+
+.Input_Label {
+color: #969493;
+font-size: 16px;
+line-height: 22px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+max-width: calc(100% - 20px);
+position: absolute;
+pointer-events: none;
+top: 0;
+left: 0;
+transform: translateX(12px) translateY(13px);
+background: transparent;
+transition: 0.2s ease transform, 0.2s ease font-size;
+}
+
+
+.btn-fn {
+    padding: 5px 24px;
+    line-height: 22px;
+    background-color: #008ab6;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+}
+
+    .btn-fn:disabled {
+        opacity: 0.5;
+    }

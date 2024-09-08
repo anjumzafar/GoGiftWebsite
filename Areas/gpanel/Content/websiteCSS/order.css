@@ -1,0 +1,346 @@
+:root {
+  --color: #008ab6;
+  --color-hover: #00b1e9;
+  -webkit-text-size-adjust: 100%;
+  font-family: "Ping", sans-serif;
+}
+body,
+div {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+input,
+textarea {
+  padding: 0.3em 0.5em;
+  border-radius: 3px;
+  border: 1px solid #bbc1d2;
+  box-sizing: border-box;
+  line-height: inherit;
+  min-height: 31px;
+}
+.container {
+  background: #f4f4f4;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.insidex {
+  font-size: 15px;
+  margin: 0 auto;
+  max-width: 944px;
+  color: #2d2928;
+}
+.Secs {
+  padding-top: 24px;
+  padding-bottom: 40px;
+}
+.FormStyleorder {
+  padding: 0 24px 0 144px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+.FormStyleorder.FormStyles_space {
+  margin-top: 24px;
+}
+.OrderMatterRoot {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 8px rgb(49 50 56 / 10%);
+  border-radius: 4px;
+  padding: 20px 19px;
+}
+.OrderComponentWithError {
+  position: relative;
+  width: 100%;
+}
+.OrderComponentWithError_Input {
+  border: 1px solid #d5d4d4;
+  border-radius: 4px;
+}
+.OrderInput {
+  width: 100%;
+  padding: 6px 12px;
+  font-size: 15px;
+  height: 38px;
+  border: none;
+  color: #2d2928;
+}
+.OrderMatterVar {
+  margin: 4px 0 0;
+  padding: 0 1px;
+  list-style: none;
+  overflow-x: auto;
+  white-space: nowrap;
+  overflow: auto;
+}
+.OrderMatterVarItem {
+  display: inline-block;
+  margin: 0 15px 0 0;
+  font-size: 15px;
+  line-height: normal;
+  color: hsl(1, 85%, 60%);
+  color: var(--color);
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  max-width: 95px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.OrderInsurance {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 8px rgb(49 50 56 / 10%);
+  border-radius: 4px;
+  padding: 20px 19px;
+}
+.Typography_Paragraph {
+  color: #2d2928;
+  margin: 0;
+}
+.Typography_p {
+  font-size: 16px;
+  line-height: 22px;
+}
+.Typography_bold {
+  font-weight: bold;
+}
+.OrderInsurance-Title {
+  margin-bottom: 16px;
+}
+.OrderInsurance_InputWrapper {
+  display: flex;
+  align-items: center;
+}
+.OrderInsurance_Description_3nz2I {
+  max-width: 454px;
+  margin-top: 12px;
+  font-size: 15px;
+}
+.OrderInsurance_Input {
+  max-width: 226px;
+  min-width: 180px;
+}
+.OrderInsurance_Insurance_Fee {
+  margin-left: 10px;
+  font-size: 15px;
+  color: #969493;
+}
+.OrderComp_With_Error_Root {
+  position: relative;
+  width: 100%;
+}
+.OrderComponentWithError_Input {
+  border: 1px solid #d5d4d4;
+  border-radius: 4px;
+}
+.FormStyles_Separator {
+  height: 40px;
+}
+.OrderBlockWithError_Root {
+  width: 100%;
+  z-index: 1;
+}
+.OrderPayment_List {
+  width: 100%;
+  display: flex;
+}
+.OrderPaymentTab_Option {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+  width: 290px;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: 1px solid #d5d4d4;
+  cursor: pointer;
+  transition: border 0.2s linear;
+}
+.OrderPaymentTab_Option:hover {
+  border-color: var(--color-hover);
+}
+.OrderPaymentTab-Active {
+  border-color: var(--color);
+}
+.OrderPaymentTab_Image {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    background: url("../../Content/svgs/cashIcon.svg") no-repeat;
+    flex-shrink: 0;
+}
+.OrderPaymentTab_Card {
+    background: url("../../Content/svgs/CardIcon.svg") no-repeat;
+}
+.OrderPaymentTab_Description {
+  margin: 0;
+  font-size: 10px;
+  color: #969493;
+}
+.OrderPromocode_Root {
+  font-size: 15px;
+}
+.OrderPromocode_Row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.OrderPromocode_InputWrapper {
+  width: 288px;
+}
+.witherror {
+  border-radius: 3px;
+  border: 1px solid transparent;
+}
+.withErroRgrey {
+  border-color: hsl(30, 30%, 85%);
+}
+.orderinput__input {
+  width: 100%;
+}
+.OrderPromocode_ButtonWrapper {
+  width: 140px;
+  margin-left: 5px;
+}
+.react-button {
+  padding: 10px 30px;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  background-color: gray;
+  border: 1px solid gray;
+  border-radius: 3px;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  text-decoration: none;
+  transition: all 0.125s ease-in;
+}
+.react-button--color {
+  color: #ffffff !important;
+  background-color: #008ab6;
+  border-color: #008ab6;
+}
+.react-button--small {
+  padding: 4px 18px;
+  font-size: 14px;
+}
+.react-button--responsive {
+  padding: 14px 25px;
+  width: 100%;
+}
+
+.OrderPromocode_HaveCode {
+  align-self: flex-start;
+  color: hsl(1, 85%, 60%);
+  color: var(--color);
+  cursor: pointer;
+}
+.OrderComponentWithError_Input {
+  border: 1px solid #d5d4d4;
+  border-radius: 4px;
+}
+/* .OrderComponentWithError_alertBorder {
+      border-color: hsl(1, 85%, 60%);
+      border-radius: 3px 3px 0 0;
+      
+  } */
+.OrderComponentWithErrorMessage {
+  display: none;
+  padding: 4px 8px;
+  background: hsl(1, 85%, 60%);
+  border-color: hsl(1, 85%, 60%);
+  border-radius: 0 0 3px 3px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: normal;
+}
+.OrderComponentWithErrorMessage.active {
+  display: block;
+}
+.OrderCodeBlockWithError {
+  padding-top: 8px;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0;
+  color: hsl(1, 85%, 60%);
+}
+
+@media screen and (max-width: 768px) {
+  .Secs {
+    padding-bottom: 34px;
+  }
+  .FormStyleorder {
+    padding: 0 12px;
+  }
+  .FormStyleorder.delv_card {
+    padding: 0px 0px;
+  }
+  .OrderPromocode_InputWrapper {
+    width: 50%;
+    padding-right: 8px;
+  }
+  .OrderPromocode_ButtonWrapper {
+    width: 50%;
+    padding-left: 8px;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .OrderPaymentTab_Option {
+    width: 100%;
+    min-width: 254px;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+  .OrderPayment_List {
+    flex-flow: row wrap;
+  }
+  .OrderInput {
+    font-size: 13px;
+  }
+}
+
+
+s,
+strike {
+    text-decoration: none;
+    /*we're replacing the default line-through*/
+    position: relative;
+    display: inline-block;
+    /* keeps it from wrapping across multiple lines */
+}
+
+    s:after,
+    strike:after {
+        content: "";
+        /* required property */
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-top: 4px solid red;
+        height: 25%;
+        /* adjust as necessary, depending on line thickness */
+        /* or use calc() if you don't need to support IE8: */
+        height: calc(50% - 2px);
+        /* 1px = half the line thickness */
+        width: 100%;
+        transform: rotateZ(-4deg);
+    }
