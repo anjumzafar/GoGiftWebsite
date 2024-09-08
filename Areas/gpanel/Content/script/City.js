@@ -18,8 +18,7 @@ function ActiveTab() {
 }
 
 function loadData() {
-    alert("Anjum");
-    $.ajax({
+        $.ajax({
         url: "/gpanel/City/List",
         type: "GET",
         contentType: "application/json;charset=utf-8",

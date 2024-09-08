@@ -22,7 +22,7 @@
 
 
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="clearTextBox();">Add New Promocode</button><br /><br />
-    <table id="PromoCodetable" class="table table-bordered table-hover">
+    <table id="PromotionalCodetable" class="table table-bordered table-hover">
         <thead>
             <tr>
                 <th>
@@ -46,6 +46,13 @@
                 <th>
                     PromotionalType
                 </th>
+                <th>
+                    MinimumCartValue
+                </th>
+                <th>
+                    MaximumDiscount
+                </th>
+
                 <th>
                     Remark
                 </th>
@@ -85,17 +92,6 @@
                         <input asp-for="PromotionalDiscount" placeholder="PromotionalDiscount" />
                     </div>
                     <div class="form-group">
-                        <label asp-for="ExpiryDate"></label>
-                        <div class="input-group date" id="ExpiryDate" data-target-input="nearest">
-                            <input type="text" id="ExpiryDate" placeholder="ExpiryDate" class="form-control datetimepicker-input" data-target="#ExpiryDate" />
-                            <div class="input-group-append" data-target="#ExpiryDate" data-toggle="datetimepicker">
-                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="form-group">
                         <label for="State">DiscountType</label>
                         <select id="DiscountType" class="form-control">
                             <option>Flat</option>
@@ -108,6 +104,27 @@
                         <select id="PromotionalType" class="form-control"></select>
                     </div>
 
+
+                    <div class="form-group">
+                        <label asp-for="MinimumCartValue"></label>
+                        <input asp-for="MinimumCartValue" placeholder="MinimumCartValue" />
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="MaximumDiscount"></label>
+                        <input asp-for="MaximumDiscount" placeholder="MaximumDiscount" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ExpiryDate">ExpiryDate</label>
+                        <div class="input-group date" id="ExpiryDate" data-target-input="nearest">
+                            <input type="text" id="ExpiryDate" placeholder="ExpiryDate" class="form-control datetimepicker-input" data-target="#ExpiryDate" />
+                            <div class="input-group-append" data-target="#ExpiryDate" data-toggle="datetimepicker">
+                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                            </div>
+                        </div>
+
+                    </div>
 
                     <div class="form-group">
                         <label for="Remark">Remark</label>

@@ -13,7 +13,7 @@ namespace GoGiftWebsite.Areas.gpanel.Controllers
         public PromotionalCodeController(ApplicationDbContext _context)
         {
             Context = _context;
-            Context.PromotionalCode.Include(u => u.DDValue);
+           // Context.PromotionalCode.Include(u => u.DDValue).ToList();
         }
         public IActionResult Index()
         {
@@ -22,7 +22,7 @@ namespace GoGiftWebsite.Areas.gpanel.Controllers
         public JsonResult List()
         {
             //List<PromotionalCodes> PromotionalCode = Context.PromotionalCode.ToList();
-            return Json(Context.PromotionalCode.ToList());
+            return Json(Context.PromotionalCode.Include(u => u.DDValue).ToList());
         }
 
         [HttpPost]
