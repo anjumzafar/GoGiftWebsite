@@ -3,14 +3,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GoGiftWebsite.Areas.gpanel.Models
 {
+    [Table("tbl_CustomerRecipientAddress")]
     public class TblCustomerRecipientAddress
     {
         [Key]
         public int CustomerRecipientAddressID { get; set; }
+        public string? RecipientName { get; set; }
         public int CustomerID { get; set; }
-       
-        [ForeignKey("CustomerID")]
-        public virtual TblCustomers? TblCustomer { get; set; }
         public string? STDCode { get; set; }
         public string? MobileNo { get; set; }
         public string? Address { get; set; }

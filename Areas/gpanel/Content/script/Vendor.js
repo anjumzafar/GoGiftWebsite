@@ -16,18 +16,18 @@ $(function () {
 
 function loadData() {
     $.ajax({
-        url: "/gpanel/Customer/List",
+        url: "/gpanel/Vendor/List",
         type: "GET",
         contentType: "application/json;charset=utf-8",
         dataType: "json",
         success: function (data) {
             //console.log(data);
             // debugger;
-            var datatableVariable = $('#Customertable').DataTable({
+            var datatableVariable = $('#Vendortable').DataTable({
                 data: data,
                 columns: [
-                    { 'data': 'CustomerID', 'autoWidth': true },
-                    { 'data': 'CustomerName', 'autoWidth': true },
+                    { 'data': 'VendorID', 'autoWidth': true },
+                    { 'data': 'VendorName', 'autoWidth': true },
                     { 'data': 'STDCode', 'autoWidth': true },
                     { 'data': 'MobileNo', 'autoWidth': true },
                     { 'data': 'City', 'autoWidth': true },
@@ -41,11 +41,11 @@ function loadData() {
                     },
                     {
                         'data': 'IsActive', 'render': function (data, type, row) {
-                            return '<div class="form-group"><div class="custom-control custom-switch"><input type="checkbox" class="custom-control-input" id="chk' + row.CustomerID + '" ' + (data ? 'checked' : '') + ' onclick="CustomerAction(' + row.CustomerID + ', this)" >  <label class="custom-control-label" for="chk' + row.CustomerID + '"></label></div></div>';
+                            return '<div class="form-group"><div class="custom-control custom-switch"><input type="checkbox" class="custom-control-input" id="chk' + row.VendorID + '" ' + (data ? 'checked' : '') + ' onclick="VendorAction(' + row.VendorID + ', this)" >  <label class="custom-control-label" for="chk' + row.VendorID + '"></label></div></div>';
                         }
                     },
                     {
-                        'data': 'CustomerID', 'render': function (item) {
+                        'data': 'VendorID', 'render': function (item) {
                             return '<a class="btn btn-info btn-sm" href="#" onclick="return getbyID(' + item + ')"><i class="fas fa-pencil-alt"></a>';
                         }
                     }
@@ -83,62 +83,21 @@ function showPassword() {
     }
 }
 
-//Add Data Function
-function Add() {
-    var res = validate();
-    if (res == false) {
-        return false;
-    }
-    var objCustomer = {
-        CustomerID: $('#CustomerID').val(),
-        CustomerName: $('#CustomerName').val(),
-        DOB: $('#DOB').val(),
-        Gender: $('#Gender').val(),
-        MobileNo: $('#MobileNo').val(),
-        Address: $('#Address').val(),
-        City: $('#City').val(),
-        State: $('#State').val(),
-        Pincode: $('#Pincode').val(),
-        Country: $('#Country').val(),
-        EmailID: $('#EmailID').val(),
-        Password: $('#Password').val()
-    };
-    //console.log(objCustomer);
-    //alert(objCustomer.CustomerName);
-    //debugger;
-    $.ajax({
-        url: "/gpanel/Customer/Add",
-        // data: '{objCustomer: ' + JSON.stringify(objCustomer) + '}',
-        data: objCustomer,
-        type: "POST",
-        //contentType: "application/json;charset=utf-8",
-        //dataType: "json",
-        cache: false,
-        success: function (result) {
-            //console.log(result);
-            //debugger;
-            $('#myModal').modal('hide');
-        },
-        error: function (errormessage) {
-            //debugger;
-            alert(errormessage.responseText);
-        }
-    });
-}
 
-//Function for getting the Data Based upon Customer ID
-function getbyID(CustomerID) {
-    $('#CustomerName').css('border-color', 'lightgrey');
+
+//Function for getting the Data Based upon Vendor ID
+function getbyID(VendorID) {
+    $('#VendorName').css('border-color', 'lightgrey');
     $('#MobileNo').css('border-color', 'lightgrey');
     $('#Address').css('border-color', 'lightgrey');
     $('#City').css('border-color', 'lightgrey');
     $('#Pincode').css('border-color', 'lightgrey');
     $('#Country').css('border-color', 'lightgrey');
     $('#EmailID').css('border-color', 'lightgrey');
-    // alert(CustomerID);
+    // alert(VendorID);
     //debugger;
     $.ajax({
-        url: "/gpanel/Customer/getbyID/" + CustomerID,
+        url: "/gpanel/Vendor/getbyID/" + VendorID,
         typr: "GET",
         contentType: "application/json;charset=UTF-8",
         dataType: "json",
@@ -146,8 +105,8 @@ function getbyID(CustomerID) {
         success: function (result) {
             //console.log(result);
             // debugger;
-            $('#CustomerID').val(result.CustomerID);
-            $('#CustomerName').val(result.CustomerName);
+            $('#VendorID').val(result.VendorID);
+            $('#VendorName').val(result.VendorName);
             $('#DOB').val(fnDateInFormat(result.DOB));
             $('#Gender').val(result.Gender);
             $('#STDCode').val(result.STDCode);
@@ -159,11 +118,11 @@ function getbyID(CustomerID) {
             $('#Country').val(result.Country);
             $('#EmailID').val(result.EmailID);
             $('#Password').val(result.Password);
-            // alert(result.CustomerName);
+            // alert(result.VendorName);
             // debugger;
 
             $('#myModal').modal('show');
-            $('#myModalLabel').text('Update Customer');
+            $('#myModalLabel').text('Update Vendor');
             $('#btnUpdate').show();
             $('#ResetPassword').show();
             $('#btnAdd').hide();
@@ -175,15 +134,15 @@ function getbyID(CustomerID) {
     return false;
 }
 
-//function for updating Customer's record
+//function for updating Vendor's record
 function Update() {
     var res = validate();
     if (res == false) {
         return false;
     }
-    var objCustomer = {
-        CustomerID: $('#CustomerID').val(),
-        CustomerName: $('#CustomerName').val(),
+    var objVendor = {
+        VendorID: $('#VendorID').val(),
+        VendorName: $('#VendorName').val(),
         DOB: $('#DOB').val(),
         Gender: $('#Gender').val(),
         MobileNo: $('#MobileNo').val(),
@@ -195,12 +154,12 @@ function Update() {
         EmailID: $('#EmailID').val(),
         Password: $('#Password').val()
     };
-    alert(objCustomer.CustomerName);
+    alert(objVendor.VendorName);
     debugger;
     $.ajax({
-        url: "/gpanel/Customer/Update",
-        //data: JSON.stringify(objCustomer),
-        data: objCustomer,
+        url: "/gpanel/Vendor/Update",
+        //data: JSON.stringify(objVendor),
+        data: objVendor,
         type: "POST",
         //contentType: "application/json;charset=utf-8",
         //dataType: "json",
@@ -209,8 +168,8 @@ function Update() {
             console.log(result);
             debugger;
             $('#myModal').modal('hide');
-            $('#CustomerID').val("");
-            $('#CustomerName').val("");
+            $('#VendorID').val("");
+            $('#VendorName').val("");
             $('#DOB').val("");
             $('#Gender').val("");
             $('#MobileNo').val("");
@@ -228,19 +187,19 @@ function Update() {
     });
 }
 
-//function for Reset Customer's Password record
+//function for Reset Vendor's Password record
 function ResetPassword() {
     var res = validate();
     if (res == false) {
         return false;
     }
-    var CustomerObj = {
-        CustomerID: $('#CustomerID').val(),
+    var VendorObj = {
+        VendorID: $('#VendorID').val(),
         Password: $('#Password').val()
     };
     $.ajax({
-        url: "/gpanel/Customer/ResetPassword",
-        data: JSON.stringify(CustomerObj),
+        url: "/gpanel/Vendor/ResetPassword",
+        data: JSON.stringify(VendorObj),
         type: "POST",
         contentType: "application/json;charset=utf-8",
         dataType: "json",
@@ -254,11 +213,11 @@ function ResetPassword() {
 }
 
 //function for Active/Deactive PromoCode's record
-function CustomerAction(ID, ctrl) {
+function VendorAction(ID, ctrl) {
     var ans = confirm("Are you sure you want to change the state of this Record?");
     if (ans) {
         $.ajax({
-            url: "/gpanel/Customer/CustomerAction/" + ID,
+            url: "/gpanel/Vendor/VendorAction/" + ID,
             type: "POST",
             contentType: "application/json;charset=UTF-8",
             dataType: "json",
@@ -288,7 +247,7 @@ function Delele(ID) {
     var ans = confirm("Are you sure you want to delete this Record?");
     if (ans) {
         $.ajax({
-            url: "/gpanel/Customer/Delete/" + ID,
+            url: "/gpanel/Vendor/Delete/" + ID,
             type: "POST",
             contentType: "application/json;charset=UTF-8",
             dataType: "json",
@@ -304,8 +263,8 @@ function Delele(ID) {
 
 //Function for clearing the textboxes
 function clearTextBox() {
-    $('#CustomerID').val("");
-    $('#CustomerName').val("");
+    $('#VendorID').val("");
+    $('#VendorName').val("");
     $('#MobileNo').val("");
     $('#Address').val("");
     $('#City').val("");
@@ -317,8 +276,8 @@ function clearTextBox() {
     $('#btnUpdate').hide();
     $('#ResetPassword').hide();
     $('#btnAdd').show();
-    $('#myModalLabel').text('Add Customer');
-    $('#CustomerName').css('border-color', 'lightgrey');
+    $('#myModalLabel').text('Add Vendor');
+    $('#VendorName').css('border-color', 'lightgrey');
     $('#MobileNo').css('border-color', 'lightgrey');
     $('#Address').css('border-color', 'lightgrey');
     $('#City').css('border-color', 'lightgrey');
@@ -329,12 +288,12 @@ function clearTextBox() {
 //Valdidation using jquery
 function validate() {
     var isValid = true;
-    if ($('#CustomerName').val().trim() == "") {
-        $('#CustomerName').css('border-color', 'Red');
+    if ($('#VendorName').val().trim() == "") {
+        $('#VendorName').css('border-color', 'Red');
         isValid = false;
     }
     else {
-        $('#CustomerName').css('border-color', 'lightgrey');
+        $('#VendorName').css('border-color', 'lightgrey');
     }
     if ($('#MobileNo').val().trim() == "") {
         $('#MobileNo').css('border-color', 'Red');

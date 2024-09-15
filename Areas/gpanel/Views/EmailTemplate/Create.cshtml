@@ -8,7 +8,7 @@
 }
 
 @section PageHeaderName {
-    <h1>Add Email Template</h1>
+    <h3>Add Email Template</h3>
 }
 @section PageBreadcum {
     <ol class="breadcrumb float-sm-right">
@@ -17,22 +17,19 @@
     </ol>
 }
 <form id="AddEmailTemplate" method="post">
-    <div class="container-fluid">
-        <div class="row">
-
-            <div class="card card-primary card-outline">
-                <div class="card-header">
-                    <h3 class="card-title">Add Email Template</h3>
-                </div>
-                <!-- /.card-header -->
+          <div class="row">
+        <div class="card card-primary card-outline">
+  <!-- /.card-header -->
                 <div class="card-body">
                     <div class="form-group">
-                        <div class="row">
+                        <div class="form-row form-row-custom">
                             <div class="col-6">
-                                <input asp-for="EmailTitle" class="form-control" placeholder="Email Title:">
+                                <label asp-for="EmailTitle">EmailTitle</label>
+                                <input asp-for="EmailTitle" class="form-control form-control-custom" placeholder="Email Title:">
                             </div>
                             <div class="col-6">
-                                <select class="form-control" asp-for="ModuleName">
+                                <label asp-for="ModuleName">ModuleName</label>
+                                <select class="form-control form-control-custom" asp-for="ModuleName">
                                     <option value="Customer">Customer</option>
                                     <option value="Vendor">Vendor</option>
                                 </select>
@@ -40,40 +37,48 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <div class="row">
+                        <div class="form-row form-row-custom">
                             <div class="col-6">
-                                <input asp-for="FromName" class="form-control" placeholder="From Name">
+                                <label asp-for="FromName">FromName</label>
+                                <input asp-for="FromName" class="form-control form-control-custom" placeholder="From Name">
                             </div>
                             <div class="col-6">
-                                <input asp-for="FromEmail" class="form-control" placeholder="From Email">
+                                <label asp-for="FromEmail">FromEmail</label>
+                                <input asp-for="FromEmail" class="form-control form-control-custom" placeholder="From Email">
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <div class="row">
+                        <div class="form-row form-row-custom">
                             <div class="col-6">
-                                <input asp-for="CC" class="form-control" placeholder="CC:">
+                                <label asp-for="CC">CC</label>
+                                <input asp-for="CC" class="form-control form-control-custom" placeholder="CC:">
                             </div>
                             <div class="col-6">
-                                <input asp-for="BCC" class="form-control" placeholder="BCC:">
+                                <label asp-for="BCC">BCC</label>
+                                <input asp-for="BCC" class="form-control form-control-custom" placeholder="BCC:">
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <input asp-for="CustomSubject" class="form-control" placeholder="Subject:">
+                        <div class="form-row form-row-custom">
+                            <div class="col-6">
+                                <label asp-for="CustomSubject">CustomSubject</label>
+                                <input asp-for="CustomSubject" class="form-control form-control-custom" placeholder="Subject:">
+                            </div>
+                            <div class="btn btn-default btn-file">
+                                <i class="fas fa-paperclip"></i> Attachment
+                                <input type="file" name="attachment" id="Attachment">
+                            </div>
+                            <p class="help-block">Max. 32MB</p>
+                        </div>
                     </div>
 
                     <div class="form-group">
                         <textarea asp-for="CustomBody" class="form-control" style="height: 300px"></textarea>
                     </div>
-                    <div class="form-group">
-                        <div class="btn btn-default btn-file">
-                            <i class="fas fa-paperclip"></i> Attachment
-                            <input type="file" name="attachment" id="Attachment">
-                        </div>
-                        <p class="help-block">Max. 32MB</p>
-                    </div>
+                   
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
@@ -85,11 +90,10 @@
                     <button type="reset" asp-controller="EmailTemplate" asp-action="Index" class="btn btn-secondary"><i class="fas fa-times"></i> Discard</button>
                 </div>
             </div>
+    </div>
             <!-- /.card-footer -->
             <!-- /.col -->
-        </div>
-        <!-- /.row -->
-    </div><!-- /.container-fluid -->
+     
 </form>
 @section Footer {
 

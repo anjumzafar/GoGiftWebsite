@@ -30,24 +30,24 @@ namespace GoGiftWebsite.Areas.gpanel.Controllers
         public JsonResult List()
         {
             // List<Customer> customers = Context.Customers.ToList();
-            return Json(Context.Customer.ToList());
+            return Json(Context.Vendor.ToList());
         }
 
         [HttpPost]
-        public JsonResult Add(TblCustomers objCustomer)
+        public JsonResult Add(TblVendors objVendor)
         {
-            Context.Customer.Add(objCustomer);
+            Context.Vendor.Add(objVendor);
             Context.SaveChanges();
             return Json(true);
         }
         public JsonResult GetbyID(int ID)
         {
-            var CustomerList = Context.Customer.ToList().Find(x => x.CustomerID.Equals(ID));
-            return Json(CustomerList);
+            var VendorList = Context.Vendor.ToList().Find(x => x.VendorID.Equals(ID));
+            return Json(VendorList);
         }
-        public JsonResult Update(TblCustomers objCustomer)
+        public JsonResult Update(TblVendors objVendor)
         {
-            Context.Customer.Update(objCustomer);
+            Context.Vendor.Update(objVendor);
             Context.SaveChanges();
             return Json(true);
         }
@@ -57,10 +57,10 @@ namespace GoGiftWebsite.Areas.gpanel.Controllers
         //}
 
 
-        public JsonResult CustomerAction(int ID)
+        public JsonResult VendorAction(int ID)
         {
-            var OriginalCustomer = Context.Customer.FirstOrDefault(c => c.CustomerID == ID);
-            OriginalCustomer.IsActive = !OriginalCustomer.IsActive;
+            var OriginalVendor = Context.Vendor.FirstOrDefault(c => c.VendorID == ID);
+            OriginalVendor.IsActive = !OriginalVendor.IsActive;
             Context.SaveChanges();
             return Json(true);
         }

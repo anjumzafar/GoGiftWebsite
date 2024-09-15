@@ -12,6 +12,9 @@ namespace GoGiftWebsite.Areas.gpanel.Data
 
         }
         public DbSet<TblCustomers> Customer { get; set; }
+        public DbSet<TblCustomerPoint> CustomerPoint { get; set; }
+        public DbSet<TblCustomerRecipientAddress> CustomerRecipientAddress { get; set; }
+        public DbSet<TblVendors> Vendor { get; set; }
         public DbSet<TblCity> City { get; set; }
         public DbSet<TblPromotionalCodes> PromotionalCode { get; set; }
         public DbSet<TblDropDown> DropDown { get; set; }

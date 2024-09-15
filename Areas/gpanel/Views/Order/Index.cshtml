@@ -1,0 +1,223 @@
+﻿@model GoGiftWebsite.Areas.gpanel.Models.TblOrders;
+
+@{
+    ViewBag.Title = "Order List";
+}
+
+@section Header {
+
+    @*   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"> *@
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-2.1.4/datatables.min.css">
+
+}
+
+@section PageHeaderName {
+    <h2>Order List</h2>
+}
+@section PageBreadcum {
+    <ol class="breadcrumb float-sm-right">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active">Order</li>
+    </ol>
+}
+    <div class="row">
+        <!-- Customer Details Column 1 -->
+        <div class="col-md-6">
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label asp-for="CustomerID">Customer ID</label>
+                <input asp-for="CustomerID" class="form-control" maxlength="6" style="max-width: 100%;">
+            </div>
+            <div class="form-group col-md-8">
+                <label asp-for="CustomerName">CustomerName</label>
+                <input asp-for="CustomerName" class="form-control">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label asp-for="STDCode">STD Code</label>
+                <input asp-for="STDCode" class="form-control" maxlength="6" style="max-width: 100%;">
+            </div>
+            <div class="form-group col-md-8">
+                <label asp-for="MobileNo">Mobile No</label>
+                <input asp-for="MobileNo" class="form-control">
+            </div>
+        </div>
+            <div class="form-group">
+                <label asp-for="EmailID">Email ID</label>
+                <input asp-for="EmailID" class="form-control" placeholder="Enter email ID">
+            </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label asp-for="CreatedOn">Order Date</label>
+                <input asp-for="CreatedOn" class="form-control" placeholder="Order Date">
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="ReferCode">Refer Code</label>
+                <input asp-for="ReferCode" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="MessageOnCard">Message</label>
+            <input asp-for="MessageOnCard" class="form-control" placeholder="Message On Card">
+        </div>
+        </div>
+
+        <!-- Customer Details Column 2 -->
+        <div class="col-md-6">
+            <div class="form-group">
+            <label asp-for="DeliveryName">Recipient Name</label>
+            <input asp-for="DeliveryName" class="form-control" placeholder="Recipient Name">
+            </div>
+        <div class="form-group">
+            <label asp-for="DeliveryAddress">Delivery Address</label>
+            <input asp-for="DeliveryAddress" class="form-control" placeholder="Delivery Address">
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label asp-for="DeliverySTDCode">STD Code</label>
+                <input asp-for="DeliverySTDCode" class="form-control" maxlength="6" style="max-width: 100%;">
+            </div>
+            <div class="form-group col-md-8">
+                <label asp-for="DeliveryMobileNo">Mobile No</label>
+                <input asp-for="DeliveryMobileNo" class="form-control">
+            </div>
+        </div>
+        <div class="form-row">
+        <div class="form-group col-md-8">
+            <label asp-for="DeliveryCity">DeliveryCity</label>
+            <input asp-for="DeliveryCity" class="form-control" maxlength="6" style="max-width: 100%;">
+        </div>
+        <div class="form-group col-md-4">
+            <label asp-for="DeliveryPincode">Delivery Pincode</label>
+            <input asp-for="DeliveryPincode" class="form-control">
+        </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label asp-for="DeliveryState">DeliveryState</label>
+                <input asp-for="DeliveryState" class="form-control" style="max-width: 100%;">
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="DeliveryCountry">Delivery Country</label>
+                <input asp-for="DeliveryCountry" class="form-control">
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Delivery Details Section -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Delivery Details</h3>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label asp-for="DeliveryName">Delivery Name</label>
+                        <input asp-for="DeliveryName" class="form-control" placeholder="Enter delivery name">
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DeliveryMobileNo">Delivery Mobile No</label>
+                        <input asp-for="DeliveryMobileNo" class="form-control" placeholder="Enter delivery mobile number">
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DeliveryAddress">Delivery Address</label>
+                        <input asp-for="DeliveryAddress" class="form-control" placeholder="Enter delivery address">
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DeliveryCity">Delivery City</label>
+                        <input asp-for="DeliveryCity" class="form-control" placeholder="Enter delivery city">
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DeliveryPincode">Delivery Pin Code</label>
+                    <input asp-for="DeliveryPincode" class="form-control" placeholder="Enter delivery Pin code">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Details Section -->
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="TotalAmount">Total Amount</label>
+                <input asp-for="TotalAmount" class="form-control" placeholder="Enter total amount">
+            </div>
+            <div class="form-group">
+                <label asp-for="Currency">Currency</label>
+                <input asp-for="Currency" class="form-control" placeholder="Enter currency">
+            </div>
+            <div class="form-group">
+                <label asp-for="DeliveryCharge">Delivery Charge</label>
+                <input asp-for="DeliveryCharge" class="form-control" placeholder="Enter delivery charge">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="PromotionalCode">Promotional Code</label>
+                <input asp-for="PromotionalCode" class="form-control" placeholder="Enter promotional code">
+            </div>
+            <div class="form-group">
+                <label asp-for="PromotionalDiscount">Promotional Discount</label>
+                <input asp-for="PromotionalDiscount" class="form-control" placeholder="Enter discount">
+            </div>
+            <div class="form-group">
+                <label asp-for="PointRedemption">Point Redemption</label>
+                <input asp-for="PointRedemption" class="form-control" placeholder="Enter points redeemed">
+            </div>
+        </div>
+    </div>
+
+    <!-- Notes Section -->
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="CustomerNotes">Customer Notes</label>
+                <textarea asp-for="CustomerNotes" class="form-control" rows="4" placeholder="Enter customer notes"></textarea>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="EmployeeNotes">Employee Notes</label>
+                <textarea asp-for="EmployeeNotes" class="form-control" rows="4" placeholder="Enter employee notes"></textarea>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReferCode">Refer Code</label>
+                <input asp-for="ReferCode" class="form-control" placeholder="Enter refer code">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+
+
+<!-- Orders Table Section -->
+<div class="row mt-4">
+    <div class="col-12">
+        <table id="Ordertable" class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>OrderID</th>
+                    <th>Customer Name</th>
+                    <th>Recipient Name</th>
+                    <th>Delivery City</th>
+                    <th>Delivery Date</th>
+                    <th>Order Status</th>
+                </tr>
+            </thead>
+            <tbody class="tbody">
+                <!-- Dynamic rows will be populated here -->
+            </tbody>
+        </table>
+    </div>
+</div>

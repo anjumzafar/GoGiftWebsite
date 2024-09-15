@@ -2,6 +2,7 @@
 using GoGiftWebsite.Areas.gpanel.Data;
 using GoGiftWebsite.Areas.gpanel.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace GoGiftWebsite.Areas.gpanel.Controllers
@@ -22,9 +23,10 @@ namespace GoGiftWebsite.Areas.gpanel.Controllers
                 return View();
             }
 
-        public IActionResult Details()
+        public IActionResult Details(int  ID)
         {
-            return View();
+            var CustomerList = Context.Customer.ToList().Find(x => x.CustomerID.Equals(ID));
+            return View(CustomerList);
         }
 
         //[HttpPost]
@@ -39,8 +41,21 @@ namespace GoGiftWebsite.Areas.gpanel.Controllers
                 // List<Customer> customers = Context.Customers.ToList();
                 return Json(Context.Customer.ToList());
             }
+        public JsonResult PointList(int ID)
+        {
+            List<TblCustomerPoint> PointList = Context.CustomerPoint
+                .Include(u => u.TblDDValue)
+                .Include(p => p.TblCustomer)
+                .ToList();
+            return Json(PointList);
+        }
 
-            [HttpPost]
+        public JsonResult RecipientAddressList(int ID)
+        {
+            return Json(Context.CustomerRecipientAddress.ToList().Where(x => x.CustomerID.Equals(ID)));
+        }
+
+        [HttpPost]
             public JsonResult Add(TblCustomers objCustomer)
             {
                 Context.Customer.Add(objCustomer);

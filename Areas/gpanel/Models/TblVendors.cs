@@ -27,13 +27,11 @@ namespace GoGiftWebsite.Areas.gpanel.Models
         public string? Pincode { get; set; }
         public string? Country { get; set; }
         public string? AccountName { get; set; }
-
         public string? AccountNo { get; set; }
         public string? BankName { get; set; }
         public string? Branch { get; set; }
         public string? IFSCCode { get; set; }
         public string? Password { get; set; }
-
         public int Priority { get; set; }
         public int CreatedBy { get; set; }
         public DateOnly CreatedOn { get; set; } = DateOnly.FromDateTime(DateTime.Now);

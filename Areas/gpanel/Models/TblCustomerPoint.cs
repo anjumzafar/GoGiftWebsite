@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace GoGiftWebsite.Areas.gpanel.Models
 {
+    [Table("tbl_CustomerPoint")]
     public class TblCustomerPoint
     {
         [Key]
@@ -11,6 +12,7 @@ namespace GoGiftWebsite.Areas.gpanel.Models
 
         [ForeignKey("CustomerID")]
         public virtual TblCustomers? TblCustomer { get; set; }
+        public int OrderID { get; set; }
         //[ForeignKey("OrderID")]
         //public virtual TblOrders? TblOrder { get; set; }
 

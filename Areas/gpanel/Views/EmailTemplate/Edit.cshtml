@@ -9,7 +9,7 @@
 }
 
 @section PageHeaderName {
-    <h1>Edit Template</h1>
+    <h3>Edit Template</h3>
 }
 @section PageBreadcum {
     <ol class="breadcrumb float-sm-right">
@@ -19,21 +19,20 @@
 }
 <form id="EditEmailTemplate" method="post">
     <input asp-for="EmailTemplateID" hidden />
-    <div class="container-fluid">
         <div class="row">
             <div class="card card-primary card-outline">
-                <div class="card-header">
-                    <h3 class="card-title">Edit Template</h3>
-                </div>
+               
                 <!-- /.card-header -->
                 <div class="card-body">
                     <div class="form-group">
-                        <div class="row">
+                    <div class="form-row form-row-custom">
                             <div class="col-6">
-                                <input asp-for="EmailTitle" class="form-control" placeholder="Email Title:" value="@Model.EmailTitle">
+                            <label asp-for="EmailTitle">EmailTitle</label>
+                            <input asp-for="EmailTitle" class="form-control form-control-custom" placeholder="Email Title:" value="@Model.EmailTitle">
                             </div>
                             <div class="col-6">
-                                <select class="form-control" asp-for="ModuleName">
+                            <label asp-for="ModuleName">ModuleName</label>
+                            <select class="form-control form-control-custom" asp-for="ModuleName">
                                     <option value="Customer" selected="@(Model.ModuleName == "Customer"? "selected" : "")">Customer</option>
                                     <option value="Vendor" selected="@(Model.ModuleName == "Vendor" ? "selected" : "")">Vendor</option>
                                 </select>
@@ -43,28 +42,34 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-6">
-                                <input asp-for="FromName" class="form-control" placeholder="From Name" value="@Model.FromName">
+                            <label asp-for="FromName">FromName</label>
+                            <input asp-for="FromName" class="form-control form-control-custom" placeholder="From Name" value="@Model.FromName">
                             </div>
                             <div class="col-6">
-                                <input asp-for="FromEmail" class="form-control" placeholder="From Email" value="@Model.FromEmail">
+                            <label asp-for="FromEmail">FromEmail</label>
+                            <input asp-for="FromEmail" class="form-control form-control-custom" placeholder="From Email" value="@Model.FromEmail">
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="row">
                             <div class="col-6">
-                                <input asp-for="CC" class="form-control" placeholder="CC:" value="@Model.CC">
+                            <label asp-for="CC">CC</label>
+                                <input asp-for="CC" class="form-control form-control-custom" placeholder="CC:" value="@Model.CC">
                             </div>
                             <div class="col-6">
-                                <input asp-for="BCC" class="form-control" placeholder="BCC:" value="@Model.BCC">
+                            <label asp-for="BCC">BCC</label>
+                            <input asp-for="BCC" class="form-control form-control-custom" placeholder="BCC:" value="@Model.BCC">
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <input asp-for="CustomSubject" class="form-control" placeholder="Subject:" value="@Model.CustomSubject">
+                    <label asp-for="CustomSubject">CustomSubject</label>
+                    <input asp-for="CustomSubject" class="form-control form-control-custom" placeholder="Subject:" value="@Model.CustomSubject">
                     </div>
                     <div class="form-group">
-                        <textarea asp-for="CustomBody" class="form-control" style="height: 300px">@Model.CustomBody</textarea>
+                    <label asp-for="CustomBody">CustomBody</label>
+                    <textarea asp-for="CustomBody" class="form-control form-control-custom" style="height: 300px">@Model.CustomBody</textarea>
                     </div>
                     <div class="form-group">
                         <div class="btn btn-default btn-file">
@@ -88,7 +93,7 @@
             <!-- /.col -->
         </div>
         <!-- /.row -->
-    </div><!-- /.container-fluid -->
+   
 </form>
 @section Footer {
 

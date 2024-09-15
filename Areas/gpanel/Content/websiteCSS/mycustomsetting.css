@@ -1,0 +1,30 @@
+/* custom.css */
+
+/* Custom style to reduce the height of form controls */
+.form-control-custom {
+    height: 30px !important;
+    padding: 5px 10px !important;
+    font-size: 14px !important;
+}
+
+/* Reduce the space between form rows */
+.form-row-custom {
+    margin-bottom: 5px !important;
+}
+
+/* Reduce the margin for form groups */
+.form-group {
+    margin-bottom: 5px !important;
+}
+
+/* Reduce the space between label and textbox */
+label {
+    margin-bottom: 2px !important;
+    font-size: 14px !important;
+}
+
+/* Further reduce padding inside the textboxes */
+.form-control-custom {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+}
